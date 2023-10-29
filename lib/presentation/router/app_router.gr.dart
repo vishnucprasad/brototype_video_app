@@ -15,13 +15,33 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    BatchLoginRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const BatchLoginPage(),
+      );
+    },
     SplashRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const SplashPage(),
       );
-    }
+    },
   };
+}
+
+/// generated route for
+/// [BatchLoginPage]
+class BatchLoginRoute extends PageRouteInfo<void> {
+  const BatchLoginRoute({List<PageRouteInfo>? children})
+      : super(
+          BatchLoginRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'BatchLoginRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
