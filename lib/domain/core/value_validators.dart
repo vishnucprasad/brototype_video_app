@@ -8,6 +8,32 @@ Either<ValueFailure<String>, String> validateStringNotEmpty(String input) {
   return left(ValueFailure.empty(failedValue: input));
 }
 
+Either<ValueFailure<String>, String> validateMinStringLength(
+  String input,
+  int minLength,
+) {
+  if (input.length >= minLength) {
+    return right(input);
+  }
+  return left(ValueFailure.shortLength(
+    failedValue: input,
+    minLength: minLength,
+  ));
+}
+
+Either<ValueFailure<String>, String> validateMaxStringLength(
+  String input,
+  int maxLength,
+) {
+  if (input.length <= maxLength) {
+    return right(input);
+  }
+  return left(ValueFailure.exceedingLength(
+    failedValue: input,
+    maxLength: maxLength,
+  ));
+}
+
 Either<ValueFailure<String>, String> validateBatchNumber(String input) {
   // Please enter a valid batch number using only numbers or a single hyphen.
   const batchNumberRegex = r'^\d\d*-?\d*\d$';

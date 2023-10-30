@@ -20,7 +20,11 @@ class Username extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
   factory Username(String input) {
-    return Username._(validateStringNotEmpty(input));
+    return Username._(validateStringNotEmpty(input)
+        .flatMap((a) => validateMinStringLength(a, 6))
+        .flatMap(
+          (a) => validateMaxStringLength(a, 20),
+        ));
   }
   const Username._(this.value);
 }

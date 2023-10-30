@@ -26,17 +26,11 @@ class AdminLoginForm extends StatelessWidget {
                 ),
           ),
           kHeightExtraLarge,
-          AdminUsernameField(
-            onChanged: (adminUsername) {},
-          ),
+          const AdminUsernameField(),
           kHeight,
-          AdminPasswordField(
-            onChanged: (adminPassword) {},
-          ),
+          const AdminPasswordField(),
           kHeight,
-          const AdminLoginButton(
-            isLoading: false,
-          ),
+          const AdminLoginButton(),
         ],
       ),
     );
