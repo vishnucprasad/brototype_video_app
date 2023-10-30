@@ -3,8 +3,8 @@ import 'package:brototype_video_app/presentation/core/extensions/context_extensi
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class BatchPasswordField extends StatelessWidget {
-  const BatchPasswordField({
+class AdminPasswordField extends StatelessWidget {
+  const AdminPasswordField({
     required this.onChanged,
     Key? key,
   }) : super(key: key);

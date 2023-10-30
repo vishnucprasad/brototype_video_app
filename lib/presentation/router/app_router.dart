@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:brototype_video_app/presentation/pages/admin/admin_login_page/admin_login_page.dart';
 import 'package:brototype_video_app/presentation/pages/batch/batch_login_page/batch_login_page.dart';
 import 'package:brototype_video_app/presentation/pages/splash_page/splash_page.dart';
 
@@ -15,6 +16,10 @@ class AppRouter extends _$AppRouter {
       ),
       CustomRoute(
         page: BatchLoginRoute.page,
+        transitionsBuilder: TransitionsBuilders.fadeIn,
+      ),
+      CustomRoute(
+        page: AdminLoginRoute.page,
         transitionsBuilder: TransitionsBuilders.fadeIn,
       ),
     ];

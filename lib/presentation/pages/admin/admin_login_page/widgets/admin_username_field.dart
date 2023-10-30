@@ -1,20 +1,19 @@
 import 'package:brototype_video_app/presentation/core/colors.dart';
 import 'package:brototype_video_app/presentation/core/extensions/context_extension.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class BatchPasswordField extends StatelessWidget {
-  const BatchPasswordField({
+class AdminUsernameField extends StatelessWidget {
+  const AdminUsernameField({
     required this.onChanged,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      cursorColor: context.isDarkMode ? kWhiteColor : kBlackColor,
+      cursorColor: kWhiteColor,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
@@ -46,25 +45,17 @@ class BatchPasswordField extends StatelessWidget {
             color: context.isDarkMode ? kBackgroundColor : kBackgroundColor,
           ),
         ),
-        hintText: 'Password',
-        hintStyle: TextStyle(
-          color: context.isDarkMode ? kGreyColor : kBlackColor,
+        hintText: "Username",
+        hintStyle: const TextStyle(
+          color: kGreyColor,
         ),
         prefixIcon: Icon(
-          Icons.lock_outline,
+          Icons.person,
           color: context.isDarkMode ? kWhiteColor : kBlackColor,
         ),
-        suffixIcon: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            CupertinoIcons.eye,
-            color: context.isDarkMode ? kWhiteColor : kBlackColor,
-          ),
-        ),
       ),
-      obscureText: true,
-      style: TextStyle(
-        color: context.isDarkMode ? kWhiteColor : kBlackColor,
+      style: const TextStyle(
+        color: kWhiteColor,
       ),
       onChanged: onChanged,
     );

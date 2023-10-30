@@ -5,10 +5,14 @@ import 'package:brototype_video_app/presentation/core/colors.dart';
 class AppScaffold extends StatelessWidget {
   const AppScaffold({
     required this.body,
+    this.floatingActionButton,
+    this.floatingActionButtonLocation,
     super.key,
   });
 
   final Widget body;
+  final FloatingActionButton? floatingActionButton;
+  final FloatingActionButtonLocation? floatingActionButtonLocation;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +24,8 @@ class AppScaffold extends StatelessWidget {
       ),
       child: Scaffold(
         body: body,
+        floatingActionButton: floatingActionButton,
+        floatingActionButtonLocation: floatingActionButtonLocation,
       ),
     );
   }

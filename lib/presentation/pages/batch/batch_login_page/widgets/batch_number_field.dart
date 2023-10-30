@@ -43,7 +43,7 @@ class BatchNumberField extends StatelessWidget {
                 ),
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintText: "Enter batch number",
+                  hintText: "Batch number",
                   hintStyle: TextStyle(
                     color: context.isDarkMode ? kGreyColor : kBlackColor,
                   ),
