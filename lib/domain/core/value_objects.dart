@@ -7,7 +7,11 @@ class BatchNumber extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
   factory BatchNumber(String input) {
-    return BatchNumber._(validateBatchNumber(input));
+    return BatchNumber._(
+      validateStringNotEmpty(input).flatMap(
+        validateBatchNumber,
+      ),
+    );
   }
   const BatchNumber._(this.value);
 }

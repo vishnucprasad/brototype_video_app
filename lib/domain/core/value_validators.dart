@@ -9,7 +9,7 @@ Either<ValueFailure<String>, String> validateStringNotEmpty(String input) {
 }
 
 Either<ValueFailure<String>, String> validateBatchNumber(String input) {
-  // Batch number must be numbers and single hyphen.
+  // Please enter a valid batch number using only numbers or a single hyphen.
   const batchNumberRegex = r'^\d\d*-?\d*\d$';
   if (RegExp(batchNumberRegex).hasMatch(input)) {
     return right(input);

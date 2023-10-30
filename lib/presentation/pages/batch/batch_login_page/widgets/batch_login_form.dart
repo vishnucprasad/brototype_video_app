@@ -26,19 +26,11 @@ class BatchLoginForm extends StatelessWidget {
                 ),
           ),
           kHeightExtraLarge,
-          BatchNumberField(
-            onChanged: (batchNumber) {},
-            dropdownValue: 'BCK',
-            onDropDownChanged: (branchCode) {},
-          ),
+          const BatchNumberField(),
           kHeight,
-          BatchPasswordField(
-            onChanged: (batchPassword) {},
-          ),
+          const BatchPasswordField(),
           kHeight,
-          const BatchLoginButton(
-            isLoading: false,
-          ),
+          const BatchLoginButton(),
         ],
       ),
     );
