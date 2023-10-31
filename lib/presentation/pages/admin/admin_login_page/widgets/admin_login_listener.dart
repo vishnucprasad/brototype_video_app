@@ -17,12 +17,15 @@ class AdminLoginListener extends StatelessWidget {
           () => null,
           (either) => either.fold(
             (f) {
-              FlushbarHelper.createError(
-                message: f.map(
-                  clientFailure: (e) => e.msg,
-                  serverFailure: (e) => e.msg,
-                ),
-              ).show(context);
+              f.maybeMap(
+                clientFailure: (e) => FlushbarHelper.createError(
+                  message: e.msg,
+                ).show(context),
+                serverFailure: (e) => FlushbarHelper.createError(
+                  message: e.msg,
+                ).show(context),
+                orElse: () => null,
+              );
             },
             (_) => null, // Authenticated event goes here,
           ),

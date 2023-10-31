@@ -6,4 +6,5 @@ part 'failure.freezed.dart';
 class Failure with _$Failure {
   const factory Failure.clientFailure(String msg) = _ClientFailure;
   const factory Failure.serverFailure(String msg) = _ServerFailure;
+  const factory Failure.tokenFailure() = _TokenFailure;
 }

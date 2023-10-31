@@ -7,7 +7,7 @@ class AdminLoginFormState with _$AdminLoginFormState {
     required bool hidePassword,
     required bool showValidationError,
     required AdminCredentials adminCredentials,
-    required Option<Either<Failure, Unit>> failureOrSuccessOption,
+    required Option<Either<Failure, Tokens>> failureOrSuccessOption,
   }) = _AdminLoginFormState;
 
   factory AdminLoginFormState.initial() {

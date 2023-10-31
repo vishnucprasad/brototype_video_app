@@ -12,6 +12,7 @@ abstract class IAdminAuthFacade {
     required Tokens tokens,
   });
   Future<Option<Tokens>> getSavedTokens();
+  Future<void> removeTokens();
   Future<Either<Failure, Admin>> authenticate();
   Future<Either<Failure, Tokens>> refreshToken();
   Future<Either<Failure, Unit>> logout();

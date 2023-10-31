@@ -614,7 +614,7 @@ mixin _$AdminLoginFormState {
   bool get hidePassword => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   AdminCredentials get adminCredentials => throw _privateConstructorUsedError;
-  Option<Either<Failure, Unit>> get failureOrSuccessOption =>
+  Option<Either<Failure, Tokens>> get failureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -633,7 +633,7 @@ abstract class $AdminLoginFormStateCopyWith<$Res> {
       bool hidePassword,
       bool showValidationError,
       AdminCredentials adminCredentials,
-      Option<Either<Failure, Unit>> failureOrSuccessOption});
+      Option<Either<Failure, Tokens>> failureOrSuccessOption});
 
   $AdminCredentialsCopyWith<$Res> get adminCredentials;
 }
@@ -677,7 +677,7 @@ class _$AdminLoginFormStateCopyWithImpl<$Res, $Val extends AdminLoginFormState>
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, Unit>>,
+              as Option<Either<Failure, Tokens>>,
     ) as $Val);
   }
 
@@ -703,7 +703,7 @@ abstract class _$$AdminLoginFormStateImplCopyWith<$Res>
       bool hidePassword,
       bool showValidationError,
       AdminCredentials adminCredentials,
-      Option<Either<Failure, Unit>> failureOrSuccessOption});
+      Option<Either<Failure, Tokens>> failureOrSuccessOption});
 
   @override
   $AdminCredentialsCopyWith<$Res> get adminCredentials;
@@ -746,7 +746,7 @@ class __$$AdminLoginFormStateImplCopyWithImpl<$Res>
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, Unit>>,
+              as Option<Either<Failure, Tokens>>,
     ));
   }
 }
@@ -770,7 +770,7 @@ class _$AdminLoginFormStateImpl implements _AdminLoginFormState {
   @override
   final AdminCredentials adminCredentials;
   @override
-  final Option<Either<Failure, Unit>> failureOrSuccessOption;
+  final Option<Either<Failure, Tokens>> failureOrSuccessOption;
 
   @override
   String toString() {
@@ -812,7 +812,7 @@ abstract class _AdminLoginFormState implements AdminLoginFormState {
       required final bool hidePassword,
       required final bool showValidationError,
       required final AdminCredentials adminCredentials,
-      required final Option<Either<Failure, Unit>>
+      required final Option<Either<Failure, Tokens>>
           failureOrSuccessOption}) = _$AdminLoginFormStateImpl;
 
   @override
@@ -824,7 +824,7 @@ abstract class _AdminLoginFormState implements AdminLoginFormState {
   @override
   AdminCredentials get adminCredentials;
   @override
-  Option<Either<Failure, Unit>> get failureOrSuccessOption;
+  Option<Either<Failure, Tokens>> get failureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
   _$$AdminLoginFormStateImplCopyWith<_$AdminLoginFormStateImpl> get copyWith =>

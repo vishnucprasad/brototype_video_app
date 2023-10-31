@@ -1,5 +1,7 @@
 import 'package:brototype_video_app/domain/admin/auth/admin_credentials.dart';
+import 'package:brototype_video_app/domain/admin/auth/i_admin_auth_facade.dart';
 import 'package:brototype_video_app/domain/core/failure.dart';
+import 'package:brototype_video_app/domain/core/tokens.dart';
 import 'package:brototype_video_app/domain/core/value_objects.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +15,9 @@ part 'admin_login_form_bloc.freezed.dart';
 @injectable
 class AdminLoginFormBloc
     extends Bloc<AdminLoginFormEvent, AdminLoginFormState> {
-  AdminLoginFormBloc() : super(AdminLoginFormState.initial()) {
+  final IAdminAuthFacade _adminAuthFacade;
+  AdminLoginFormBloc(this._adminAuthFacade)
+      : super(AdminLoginFormState.initial()) {
     on<AdminLoginFormEvent>((event, emit) async {
       await event.map(
         usernameChanged: (e) async => emit(state.copyWith(
@@ -33,7 +37,7 @@ class AdminLoginFormBloc
           failureOrSuccessOption: none(),
         )),
         loginButtonPressed: (_) async {
-          Either<Failure, Unit>? failureOrSuccess;
+          Either<Failure, Tokens>? failureOrSuccess;
 
           if (state.adminCredentials.failureOption.isNone()) {
             emit(state.copyWith(
@@ -41,7 +45,14 @@ class AdminLoginFormBloc
               failureOrSuccessOption: none(),
             ));
 
-            // login logic goes here
+            failureOrSuccess = await _adminAuthFacade.login(
+              credentials: state.adminCredentials,
+            );
+
+            failureOrSuccess.fold(
+              (_) => null,
+              (r) async => await _adminAuthFacade.saveTokens(tokens: r),
+            );
           }
 
           emit(state.copyWith(
