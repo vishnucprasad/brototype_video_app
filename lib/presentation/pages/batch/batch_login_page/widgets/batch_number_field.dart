@@ -75,7 +75,7 @@ class BatchNumberField extends HookWidget {
                 (l) => l.maybeMap(
                   empty: (_) => "Batch number can't be empty.",
                   invalid: (_) =>
-                      "Please enter a valid batch number using only numbers or a single hyphen.",
+                      "Please enter a valid batch number using only numbers or a single hyphen and atleast 2 charecters long.",
                   orElse: () => null,
                 ),
                 (r) => null,

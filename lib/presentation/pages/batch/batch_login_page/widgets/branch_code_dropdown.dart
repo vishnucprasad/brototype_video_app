@@ -22,7 +22,7 @@ class BranchCodeDropdown extends StatelessWidget {
     return BlocBuilder<BatchLoginFormBloc, BatchLoginFormState>(
       builder: (context, state) {
         return Container(
-          margin: const EdgeInsets.only(right: 8),
+          margin: const EdgeInsets.only(left: 2, right: 8),
           padding: const EdgeInsets.symmetric(horizontal: 2),
           child: DropdownButtonHideUnderline(
             child: DropdownButton2(
@@ -55,14 +55,11 @@ class BranchCodeDropdown extends StatelessWidget {
               ),
               iconSize: 14,
               iconEnabledColor: context.isDarkMode ? kWhiteColor : kBlackColor,
-              buttonHeight: 56,
+              buttonHeight: 50,
               buttonPadding: const EdgeInsets.only(left: 16, right: 16),
               buttonDecoration: BoxDecoration(
                 boxShadow: List.empty(),
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
-                ),
+                borderRadius: BorderRadius.circular(8),
                 border: Border.all(
                   color: context.isDarkMode ? kBackgroundColor : kGreyColor,
                 ),
