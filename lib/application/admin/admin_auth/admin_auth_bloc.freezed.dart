@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AdminAuthEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
     required TResult Function() logout,
@@ -25,6 +26,7 @@ mixin _$AdminAuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
     TResult? Function()? logout,
@@ -32,6 +34,7 @@ mixin _$AdminAuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     TResult Function()? logout,
@@ -40,6 +43,7 @@ mixin _$AdminAuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
     required TResult Function(_Logout value) logout,
@@ -47,6 +51,7 @@ mixin _$AdminAuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
     TResult? Function(_Logout value)? logout,
@@ -54,6 +59,7 @@ mixin _$AdminAuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     TResult Function(_Logout value)? logout,
@@ -78,6 +84,120 @@ class _$AdminAuthEventCopyWithImpl<$Res, $Val extends AdminAuthEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$UserAuthenticatedImplCopyWith<$Res> {
+  factory _$$UserAuthenticatedImplCopyWith(_$UserAuthenticatedImpl value,
+          $Res Function(_$UserAuthenticatedImpl) then) =
+      __$$UserAuthenticatedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UserAuthenticatedImplCopyWithImpl<$Res>
+    extends _$AdminAuthEventCopyWithImpl<$Res, _$UserAuthenticatedImpl>
+    implements _$$UserAuthenticatedImplCopyWith<$Res> {
+  __$$UserAuthenticatedImplCopyWithImpl(_$UserAuthenticatedImpl _value,
+      $Res Function(_$UserAuthenticatedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UserAuthenticatedImpl implements _UserAuthenticated {
+  const _$UserAuthenticatedImpl();
+
+  @override
+  String toString() {
+    return 'AdminAuthEvent.userAuthenticated()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UserAuthenticatedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() userAuthenticated,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
+    required TResult Function() logout,
+  }) {
+    return userAuthenticated();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? userAuthenticated,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
+    TResult? Function()? logout,
+  }) {
+    return userAuthenticated?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? userAuthenticated,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (userAuthenticated != null) {
+      return userAuthenticated();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UserAuthenticated value) userAuthenticated,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return userAuthenticated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UserAuthenticated value)? userAuthenticated,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return userAuthenticated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UserAuthenticated value)? userAuthenticated,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (userAuthenticated != null) {
+      return userAuthenticated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UserAuthenticated implements AdminAuthEvent {
+  const factory _UserAuthenticated() = _$UserAuthenticatedImpl;
 }
 
 /// @nodoc
@@ -118,6 +238,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
     required TResult Function() logout,
@@ -128,6 +249,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
     TResult? Function()? logout,
@@ -138,6 +260,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     TResult Function()? logout,
@@ -152,6 +275,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
     required TResult Function(_Logout value) logout,
@@ -162,6 +286,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
     TResult? Function(_Logout value)? logout,
@@ -172,6 +297,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     TResult Function(_Logout value)? logout,
@@ -226,6 +352,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
     required TResult Function() logout,
@@ -236,6 +363,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
     TResult? Function()? logout,
@@ -246,6 +374,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     TResult Function()? logout,
@@ -260,6 +389,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
     required TResult Function(_Logout value) logout,
@@ -270,6 +400,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
     TResult? Function(_Logout value)? logout,
@@ -280,6 +411,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     TResult Function(_Logout value)? logout,
@@ -334,6 +466,7 @@ class _$LogoutImpl implements _Logout {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
     required TResult Function() logout,
@@ -344,6 +477,7 @@ class _$LogoutImpl implements _Logout {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
     TResult? Function()? logout,
@@ -354,6 +488,7 @@ class _$LogoutImpl implements _Logout {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     TResult Function()? logout,
@@ -368,6 +503,7 @@ class _$LogoutImpl implements _Logout {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
     required TResult Function(_Logout value) logout,
@@ -378,6 +514,7 @@ class _$LogoutImpl implements _Logout {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
     TResult? Function(_Logout value)? logout,
@@ -388,6 +525,7 @@ class _$LogoutImpl implements _Logout {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     TResult Function(_Logout value)? logout,

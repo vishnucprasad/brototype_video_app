@@ -14,6 +14,9 @@ class AdminAuthBloc extends Bloc<AdminAuthEvent, AdminAuthState> {
   AdminAuthBloc(this._adminAuthFacade) : super(const AdminAuthState.initial()) {
     on<AdminAuthEvent>((event, emit) async {
       await event.map(
+        userAuthenticated: (_) async => emit(
+          const AdminAuthState.authenticated(),
+        ),
         authCheckRequested: (_) async {
           await Future.delayed(const Duration(seconds: 1));
           final adminOption = await _adminAuthFacade.authenticate();

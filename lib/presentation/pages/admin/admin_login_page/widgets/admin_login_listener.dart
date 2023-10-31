@@ -1,4 +1,5 @@
 import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart';
 import 'package:brototype_video_app/application/admin/admin_login_form/admin_login_form_bloc.dart';
 import 'package:brototype_video_app/presentation/pages/admin/admin_login_page/widgets/admin_login_body.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,9 @@ class AdminLoginListener extends StatelessWidget {
                 orElse: () => null,
               );
             },
-            (_) => null, // Authenticated event goes here,
+            (_) => context
+                .read<AdminAuthBloc>()
+                .add(const AdminAuthEvent.userAuthenticated()),
           ),
         );
       },
