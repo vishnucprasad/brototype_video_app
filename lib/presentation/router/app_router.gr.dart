@@ -27,6 +27,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const BatchLoginPage(),
       );
     },
+    CreateBatchRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CreateBatchPage(),
+      );
+    },
     SplashRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -60,6 +66,20 @@ class BatchLoginRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'BatchLoginRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CreateBatchPage]
+class CreateBatchRoute extends PageRouteInfo<void> {
+  const CreateBatchRoute({List<PageRouteInfo>? children})
+      : super(
+          CreateBatchRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CreateBatchRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

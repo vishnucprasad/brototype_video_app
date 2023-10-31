@@ -1,10 +1,15 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart';
+import 'package:brototype_video_app/domain/core/app_keys.dart';
+import 'package:brototype_video_app/domain/core/constants.dart';
+import 'package:brototype_video_app/injection.dart';
 import 'package:brototype_video_app/presentation/core/colors.dart';
 import 'package:brototype_video_app/presentation/core/constants.dart';
 import 'package:brototype_video_app/presentation/core/extensions/context_extension.dart';
 import 'package:brototype_video_app/presentation/core/widgets/app_scaffold.dart';
-import 'package:brototype_video_app/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 @RoutePage()
 class SplashPage extends StatelessWidget {
@@ -15,9 +20,14 @@ class SplashPage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await Future.delayed(const Duration(seconds: 3));
-      // ignore: use_build_context_synchronously
-      context.replaceRoute(const BatchLoginRoute());
+      final index = getIt<SharedPreferences>().getInt(AppKeys.authRoleKey);
+      final authRole = Role.values[index ?? 0];
+
+      if (authRole == Role.admin) {
+        return context
+            .read<AdminAuthBloc>()
+            .add(const AdminAuthEvent.authCheckRequested());
+      }
     });
 
     return AppScaffold(
