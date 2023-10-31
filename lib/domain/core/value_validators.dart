@@ -46,7 +46,7 @@ Either<ValueFailure<String>, String> validateBatchNumber(String input) {
 Either<ValueFailure<String>, String> validatePassWord(String input) {
   // Password must be minimum six characters, at least one uppercase letter, one lowercase letter, one number and one special character.
   const passwordRegex =
-      r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$';
+      r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_\-=+])[A-Za-z\d!@#$%^&*()_\-=+]{6,}$';
   if (RegExp(passwordRegex).hasMatch(input)) {
     return right(input);
   }

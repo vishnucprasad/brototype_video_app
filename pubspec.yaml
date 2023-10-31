@@ -32,6 +32,7 @@ dependencies:
   auto_route: ^7.8.4
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
+  dio: ^5.3.3
   dropdown_button2: ^1.9.2
   flutter:
     sdk: flutter
@@ -43,6 +44,7 @@ dependencies:
   injectable: ^2.3.2
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   auto_route_generator: ^7.3.2
