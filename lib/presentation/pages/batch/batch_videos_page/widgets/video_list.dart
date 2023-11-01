@@ -1,7 +1,9 @@
 import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:brototype_video_app/domain/batch/batch.dart';
 import 'package:brototype_video_app/presentation/core/constants.dart';
 import 'package:brototype_video_app/presentation/pages/batch/batch_videos_page/widgets/video_frame.dart';
+import 'package:brototype_video_app/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 
 class VideoList extends StatelessWidget {
@@ -33,7 +35,11 @@ class VideoList extends StatelessWidget {
                           FlushbarHelper.createError(
                             message: 'This video is locked!',
                           ).show(context);
+                          return;
                         }
+                        context.pushRoute(
+                          BatchVideoPLayerRoute(videoUrl: video.url!),
+                        );
                       },
                     ),
                     kHeightLarge,

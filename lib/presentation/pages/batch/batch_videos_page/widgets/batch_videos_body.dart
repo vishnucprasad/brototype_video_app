@@ -22,31 +22,39 @@ class BatchVideosBody extends StatelessWidget {
       body: SafeArea(
         child: BlocBuilder<BatchBloc, BatchState>(
           builder: (context, state) {
-            return Column(
-              children: [
-                kHeightSmall,
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 80.0),
-                  height: 100,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: context.isDarkMode ? kLightLogo : kDarkLogo,
+            return RefreshIndicator(
+              onRefresh: () async {
+                context
+                    .read<BatchBloc>()
+                    .add(const BatchEvent.getBatchDetails());
+              },
+              child: Column(
+                children: [
+                  kHeightSmall,
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 80.0),
+                    height: 100,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: context.isDarkMode ? kLightLogo : kDarkLogo,
+                      ),
                     ),
                   ),
-                ),
-                kHeightSmall,
-                state.isLoading
-                    ? Expanded(
-                        child: Center(
-                          child: CircularProgressIndicator(
-                            color:
-                                context.isDarkMode ? kWhiteColor : kBlackColor,
+                  kHeightSmall,
+                  state.isLoading
+                      ? Expanded(
+                          child: Center(
+                            child: CircularProgressIndicator(
+                              color: context.isDarkMode
+                                  ? kWhiteColor
+                                  : kBlackColor,
+                            ),
                           ),
-                        ),
-                      )
-                    : VideoList(batch: state.batch),
-              ],
+                        )
+                      : VideoList(batch: state.batch),
+                ],
+              ),
             );
           },
         ),

@@ -27,6 +27,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const BatchLoginPage(),
       );
     },
+    BatchVideoPLayerRoute.name: (routeData) {
+      final args = routeData.argsAs<BatchVideoPLayerRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: BatchVideoPLayerPage(
+          videoUrl: args.videoUrl,
+          key: args.key,
+        ),
+      );
+    },
     BatchVideosRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -80,6 +90,44 @@ class BatchLoginRoute extends PageRouteInfo<void> {
   static const String name = 'BatchLoginRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [BatchVideoPLayerPage]
+class BatchVideoPLayerRoute extends PageRouteInfo<BatchVideoPLayerRouteArgs> {
+  BatchVideoPLayerRoute({
+    required String videoUrl,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          BatchVideoPLayerRoute.name,
+          args: BatchVideoPLayerRouteArgs(
+            videoUrl: videoUrl,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'BatchVideoPLayerRoute';
+
+  static const PageInfo<BatchVideoPLayerRouteArgs> page =
+      PageInfo<BatchVideoPLayerRouteArgs>(name);
+}
+
+class BatchVideoPLayerRouteArgs {
+  const BatchVideoPLayerRouteArgs({
+    required this.videoUrl,
+    this.key,
+  });
+
+  final String videoUrl;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'BatchVideoPLayerRouteArgs{videoUrl: $videoUrl, key: $key}';
+  }
 }
 
 /// generated route for
