@@ -13,8 +13,7 @@ class BatchRepository implements IBatchRepository {
   final dio = getIt<Dio>();
 
   @override
-  Future<Either<Failure, Batch>> getBatchDetails(
-      {required String batchId}) async {
+  Future<Either<Failure, Batch>> getBatchDetails() async {
     try {
       final savedTokens = await dio.getBatchTokens();
 
@@ -27,9 +26,7 @@ class BatchRepository implements IBatchRepository {
       dio.options.headers["Authorization"] =
           "Bearer ${savedTokens.accessToken}";
 
-      final response = await dio.get(
-        '${ApiEndPoints.getBatchDetails}/$batchId',
-      );
+      final response = await dio.get(ApiEndPoints.batchAuth);
 
       if (response.statusCode == 200) {
         final batch = Batch.fromJson(response.data);

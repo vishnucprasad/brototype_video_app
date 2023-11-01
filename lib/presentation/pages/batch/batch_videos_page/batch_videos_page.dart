@@ -1,6 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:brototype_video_app/presentation/core/widgets/app_scaffold.dart';
+import 'package:brototype_video_app/application/batch/batch_bloc.dart';
+import 'package:brototype_video_app/injection.dart';
+import 'package:brototype_video_app/presentation/pages/batch/batch_videos_page/widgets/batch_videos_listener.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
 class BatchVideosPage extends StatelessWidget {
@@ -8,10 +11,9 @@ class BatchVideosPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AppScaffold(
-      body: Center(
-        child: Text('Batch Videos Page'),
-      ),
+    return BlocProvider(
+      create: (context) => getIt<BatchBloc>(),
+      child: const BatchVideosListener(),
     );
   }
 }

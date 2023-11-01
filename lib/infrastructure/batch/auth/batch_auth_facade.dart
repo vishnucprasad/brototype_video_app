@@ -163,7 +163,7 @@ class BatchAuthFacade implements IBatchAuthFacade {
         final tokens = Tokens(
           accessToken: response.data["access_token"],
           refreshToken: savedTokens.refreshToken,
-          role: Role.admin,
+          role: Role.batch,
         );
         return right(tokens);
       }

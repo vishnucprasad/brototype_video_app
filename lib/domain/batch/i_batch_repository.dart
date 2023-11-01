@@ -3,7 +3,5 @@ import 'package:brototype_video_app/domain/core/failure.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class IBatchRepository {
-  Future<Either<Failure, Batch>> getBatchDetails({
-    required String batchId,
-  });
+  Future<Either<Failure, Batch>> getBatchDetails();
 }
