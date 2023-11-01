@@ -1,6 +1,7 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart';
 import 'package:brototype_video_app/application/admin/admin_bloc.dart';
+import 'package:brototype_video_app/application/batch/batch_auth/batch_auth_bloc.dart';
 import 'package:brototype_video_app/domain/core/app_keys.dart';
 import 'package:brototype_video_app/injection.dart';
 import 'package:brototype_video_app/presentation/router/app_router.dart';
@@ -20,6 +21,7 @@ class BrototypeVideoApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => getIt<AdminAuthBloc>()),
         BlocProvider(create: (context) => getIt<AdminBloc>()),
+        BlocProvider(create: (context) => getIt<BatchAuthBloc>()),
       ],
       child: MultiBlocListener(
         listeners: [
@@ -60,6 +62,19 @@ class BrototypeVideoApp extends StatelessWidget {
                   },
                   (_) => null,
                 ),
+              );
+            },
+          ),
+          BlocListener<BatchAuthBloc, BatchAuthState>(
+            listener: (context, state) {
+              state.map(
+                initial: (_) => null,
+                authenticated: (_) {
+                  _appRouter.replace(const BatchVideosRoute());
+                },
+                unauthenticated: (_) {
+                  _appRouter.replace(const BatchLoginRoute());
+                },
               );
             },
           ),

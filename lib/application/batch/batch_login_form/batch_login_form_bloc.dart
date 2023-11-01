@@ -1,5 +1,7 @@
 import 'package:brototype_video_app/domain/batch/auth/batch_credentials.dart';
+import 'package:brototype_video_app/domain/batch/auth/i_batch_auth_facade.dart';
 import 'package:brototype_video_app/domain/core/failure.dart';
+import 'package:brototype_video_app/domain/core/tokens.dart';
 import 'package:brototype_video_app/domain/core/value_objects.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +15,10 @@ part 'batch_login_form_bloc.freezed.dart';
 @injectable
 class BatchLoginFormBloc
     extends Bloc<BatchLoginFormEvent, BatchLoginFormState> {
-  BatchLoginFormBloc() : super(BatchLoginFormState.initial()) {
+  final IBatchAuthFacade _batchAuthFacade;
+  BatchLoginFormBloc(
+    this._batchAuthFacade,
+  ) : super(BatchLoginFormState.initial()) {
     on<BatchLoginFormEvent>((event, emit) async {
       await event.map(
         brachCodeChanged: (e) async => emit(state.copyWith(
@@ -39,7 +44,7 @@ class BatchLoginFormBloc
           failureOrSuccessOption: none(),
         )),
         loginButtonPressed: (_) async {
-          Either<Failure, Unit>? failureOrSuccess;
+          Either<Failure, Tokens>? failureOrSuccess;
 
           if (state.batchCredentials.failureOption.isNone()) {
             emit(state.copyWith(
@@ -47,7 +52,14 @@ class BatchLoginFormBloc
               failureOrSuccessOption: none(),
             ));
 
-            // login logic goes here
+            failureOrSuccess = await _batchAuthFacade.login(
+              credentials: state.batchCredentials,
+            );
+
+            failureOrSuccess.fold(
+              (_) => null,
+              (r) async => await _batchAuthFacade.saveTokens(tokens: r),
+            );
           }
 
           emit(state.copyWith(

@@ -1,4 +1,5 @@
 import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:brototype_video_app/application/batch/batch_auth/batch_auth_bloc.dart';
 import 'package:brototype_video_app/application/batch/batch_login_form/batch_login_form_bloc.dart';
 import 'package:brototype_video_app/presentation/pages/batch/batch_login_page/widgets/batch_login_body.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,9 @@ class BatchLoginListener extends StatelessWidget {
                 orElse: () => null,
               );
             },
-            (_) => null, // Authenticated event goes here,
+            (_) => context
+                .read<BatchAuthBloc>()
+                .add(const BatchAuthEvent.userAuthenticated()),
           ),
         );
       },

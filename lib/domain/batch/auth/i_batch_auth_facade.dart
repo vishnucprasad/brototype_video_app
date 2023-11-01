@@ -14,9 +14,5 @@ abstract class IBatchAuthFacade {
   Future<Option<Tokens>> getSavedTokens();
   Future<void> removeTokens();
   Future<Either<Failure, Batch>> authenticate();
-  Future<Either<Failure, Batch>> getBatchDetails({
-    required String batchId,
-  });
   Future<Either<Failure, Tokens>> refreshToken();
-  Future<Either<Failure, Unit>> logout();
 }

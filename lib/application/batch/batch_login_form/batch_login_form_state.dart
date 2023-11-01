@@ -7,7 +7,7 @@ class BatchLoginFormState with _$BatchLoginFormState {
     required bool hidePassword,
     required bool showValidationError,
     required BatchCredentials batchCredentials,
-    required Option<Either<Failure, Unit>> failureOrSuccessOption,
+    required Option<Either<Failure, Tokens>> failureOrSuccessOption,
   }) = _BatchLoginFormState;
 
   factory BatchLoginFormState.initial() {

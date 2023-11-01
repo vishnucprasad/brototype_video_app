@@ -799,7 +799,7 @@ mixin _$BatchLoginFormState {
   bool get hidePassword => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   BatchCredentials get batchCredentials => throw _privateConstructorUsedError;
-  Option<Either<Failure, Unit>> get failureOrSuccessOption =>
+  Option<Either<Failure, Tokens>> get failureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -818,7 +818,7 @@ abstract class $BatchLoginFormStateCopyWith<$Res> {
       bool hidePassword,
       bool showValidationError,
       BatchCredentials batchCredentials,
-      Option<Either<Failure, Unit>> failureOrSuccessOption});
+      Option<Either<Failure, Tokens>> failureOrSuccessOption});
 
   $BatchCredentialsCopyWith<$Res> get batchCredentials;
 }
@@ -862,7 +862,7 @@ class _$BatchLoginFormStateCopyWithImpl<$Res, $Val extends BatchLoginFormState>
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, Unit>>,
+              as Option<Either<Failure, Tokens>>,
     ) as $Val);
   }
 
@@ -888,7 +888,7 @@ abstract class _$$BatchLoginFormStateImplCopyWith<$Res>
       bool hidePassword,
       bool showValidationError,
       BatchCredentials batchCredentials,
-      Option<Either<Failure, Unit>> failureOrSuccessOption});
+      Option<Either<Failure, Tokens>> failureOrSuccessOption});
 
   @override
   $BatchCredentialsCopyWith<$Res> get batchCredentials;
@@ -931,7 +931,7 @@ class __$$BatchLoginFormStateImplCopyWithImpl<$Res>
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, Unit>>,
+              as Option<Either<Failure, Tokens>>,
     ));
   }
 }
@@ -955,7 +955,7 @@ class _$BatchLoginFormStateImpl implements _BatchLoginFormState {
   @override
   final BatchCredentials batchCredentials;
   @override
-  final Option<Either<Failure, Unit>> failureOrSuccessOption;
+  final Option<Either<Failure, Tokens>> failureOrSuccessOption;
 
   @override
   String toString() {
@@ -997,7 +997,7 @@ abstract class _BatchLoginFormState implements BatchLoginFormState {
       required final bool hidePassword,
       required final bool showValidationError,
       required final BatchCredentials batchCredentials,
-      required final Option<Either<Failure, Unit>>
+      required final Option<Either<Failure, Tokens>>
           failureOrSuccessOption}) = _$BatchLoginFormStateImpl;
 
   @override
@@ -1009,7 +1009,7 @@ abstract class _BatchLoginFormState implements BatchLoginFormState {
   @override
   BatchCredentials get batchCredentials;
   @override
-  Option<Either<Failure, Unit>> get failureOrSuccessOption;
+  Option<Either<Failure, Tokens>> get failureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
   _$$BatchLoginFormStateImplCopyWith<_$BatchLoginFormStateImpl> get copyWith =>

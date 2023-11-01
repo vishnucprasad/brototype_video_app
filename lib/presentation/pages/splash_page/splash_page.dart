@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart';
+import 'package:brototype_video_app/application/batch/batch_auth/batch_auth_bloc.dart';
 import 'package:brototype_video_app/domain/core/app_keys.dart';
 import 'package:brototype_video_app/domain/core/constants.dart';
 import 'package:brototype_video_app/injection.dart';
@@ -21,13 +22,17 @@ class SplashPage extends StatelessWidget {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       final index = getIt<SharedPreferences>().getInt(AppKeys.authRoleKey);
-      final authRole = Role.values[index ?? 0];
+      final authRole = Role.values[index ?? 1];
 
       if (authRole == Role.admin) {
         return context
             .read<AdminAuthBloc>()
             .add(const AdminAuthEvent.authCheckRequested());
       }
+
+      context
+          .read<BatchAuthBloc>()
+          .add(const BatchAuthEvent.authCheckRequested());
     });
 
     return AppScaffold(
