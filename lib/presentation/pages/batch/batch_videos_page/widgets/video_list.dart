@@ -1,7 +1,7 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:brototype_video_app/domain/batch/batch.dart';
 import 'package:brototype_video_app/presentation/core/constants.dart';
-import 'package:brototype_video_app/presentation/pages/admin/video_actions_page/widgets/video_frame.dart';
+import 'package:brototype_video_app/presentation/pages/batch/batch_videos_page/widgets/video_frame.dart';
 import 'package:flutter/material.dart';
 
 class VideoList extends StatelessWidget {

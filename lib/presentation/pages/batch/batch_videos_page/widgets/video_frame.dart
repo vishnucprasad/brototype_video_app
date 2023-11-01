@@ -70,7 +70,7 @@ class VideoFrame extends StatelessWidget {
                                   onPressed: onPressed,
                                   iconSize: 30,
                                   icon: const Icon(
-                                    Icons.lock_open_outlined,
+                                    Icons.lock_outlined,
                                     color: kBlackColor,
                                   ),
                                 ),
@@ -91,7 +91,7 @@ class VideoFrame extends StatelessWidget {
                               onPressed: onPressed,
                               iconSize: 30,
                               icon: const Icon(
-                                Icons.lock_outlined,
+                                Icons.play_arrow,
                                 color: kBlackColor,
                               ),
                             ),
