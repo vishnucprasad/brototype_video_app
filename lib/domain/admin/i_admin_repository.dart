@@ -13,12 +13,10 @@ abstract class IAdminRepository {
   Future<Option<String>> getSavedBatchId();
   Future<void> removeBatchId();
   Future<Either<Failure, Batch>> getBatchDetails();
-  Future<Either<Failure, Batch>> lockVideo(
-    String? batchId,
-    String? videoId,
-  );
-  Future<Either<Failure, Batch>> unlockVideo(
-    String? batchId,
-    String? videoId,
-  );
+  Future<Either<Failure, Batch>> lockVideo({
+    required String videoId,
+  });
+  Future<Either<Failure, Batch>> unlockVideo({
+    required String videoId,
+  });
 }

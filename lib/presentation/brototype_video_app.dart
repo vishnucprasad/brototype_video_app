@@ -1,4 +1,6 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart';
+import 'package:brototype_video_app/application/admin/admin_bloc.dart';
 import 'package:brototype_video_app/injection.dart';
 import 'package:brototype_video_app/presentation/router/app_router.dart';
 import 'package:brototype_video_app/presentation/theme/app_theme.dart';
@@ -15,6 +17,7 @@ class BrototypeVideoApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => getIt<AdminAuthBloc>()),
+        BlocProvider(create: (context) => getIt<AdminBloc>()),
       ],
       child: MultiBlocListener(
         listeners: [
@@ -28,6 +31,27 @@ class BrototypeVideoApp extends StatelessWidget {
                 unauthenticated: (_) {
                   _appRouter.replace(const AdminLoginRoute());
                 },
+              );
+            },
+          ),
+          BlocListener<AdminBloc, AdminState>(
+            listener: (context, state) {
+              state.failureOrSuccessOption.fold(
+                () => null,
+                (either) => either.fold(
+                  (f) {
+                    f.maybeMap(
+                      clientFailure: (e) => FlushbarHelper.createError(
+                        message: e.msg,
+                      ).show(context),
+                      serverFailure: (e) => FlushbarHelper.createError(
+                        message: e.msg,
+                      ).show(context),
+                      orElse: () => null,
+                    );
+                  },
+                  (_) => null,
+                ),
               );
             },
           ),

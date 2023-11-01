@@ -5,4 +5,8 @@ class ApiEndPoints {
   static const adminAuth = '$kApiBaseUrl/admin';
   static const adminRefershToken = '$kApiBaseUrl/auth/admin/refresh';
   static const adminLogout = '$kApiBaseUrl/auth/admin';
+  static const createBatch = '$kApiBaseUrl/batch';
+  static const getBatchDetails = '$kApiBaseUrl/batch';
+  static const lockVideo = '$kApiBaseUrl/video/lock';
+  static const unlockVideo = '$kApiBaseUrl/video/unlock';
 }

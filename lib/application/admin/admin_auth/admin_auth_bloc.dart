@@ -1,4 +1,5 @@
 import 'package:brototype_video_app/domain/admin/auth/i_admin_auth_facade.dart';
+import 'package:brototype_video_app/domain/admin/i_admin_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -11,7 +12,11 @@ part 'admin_auth_bloc.freezed.dart';
 class AdminAuthBloc extends Bloc<AdminAuthEvent, AdminAuthState> {
   AdminAuthEvent? _refreshEvent;
   final IAdminAuthFacade _adminAuthFacade;
-  AdminAuthBloc(this._adminAuthFacade) : super(const AdminAuthState.initial()) {
+  final IAdminRepository _adminRepository;
+  AdminAuthBloc(
+    this._adminAuthFacade,
+    this._adminRepository,
+  ) : super(const AdminAuthState.initial()) {
     on<AdminAuthEvent>((event, emit) async {
       await event.map(
         userAuthenticated: (_) async => emit(
@@ -45,16 +50,21 @@ class AdminAuthBloc extends Bloc<AdminAuthEvent, AdminAuthState> {
         },
         logout: (_) async {
           final logoutOption = await _adminAuthFacade.logout();
-          logoutOption.fold(
+          await logoutOption.fold(
             (l) => l.maybeMap(
               tokenFailure: (_) {
                 _refreshEvent = const AdminAuthEvent.logout();
                 add(const AdminAuthEvent.refreshToken());
               },
-              orElse: () => emit(const AdminAuthState.unauthenticated()),
+              orElse: () async {
+                // await _adminAuthFacade.removeTokens();
+                // await _adminRepository.removeBatchId();
+                emit(const AdminAuthState.unauthenticated());
+              },
             ),
             (r) async {
               await _adminAuthFacade.removeTokens();
+              await _adminRepository.removeBatchId();
               emit(const AdminAuthState.unauthenticated());
             },
           );

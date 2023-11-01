@@ -14,4 +14,6 @@ class CreateBatchFormEvent with _$CreateBatchFormEvent {
   const factory CreateBatchFormEvent.obscureTextChanged() = _ObscureTextChanged;
   const factory CreateBatchFormEvent.createButtonPressed() =
       _CreateButtonPressed;
+  const factory CreateBatchFormEvent.authCheckRequested() = _AuthCheckRequested;
+  const factory CreateBatchFormEvent.refreshToken() = _RefreshToken;
 }

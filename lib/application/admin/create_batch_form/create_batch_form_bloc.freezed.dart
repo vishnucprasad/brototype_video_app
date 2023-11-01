@@ -23,6 +23,8 @@ mixin _$CreateBatchFormEvent {
     required TResult Function(String password) passwordChanged,
     required TResult Function() obscureTextChanged,
     required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +34,8 @@ mixin _$CreateBatchFormEvent {
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? obscureTextChanged,
     TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +45,8 @@ mixin _$CreateBatchFormEvent {
     TResult Function(String password)? passwordChanged,
     TResult Function()? obscureTextChanged,
     TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +57,8 @@ mixin _$CreateBatchFormEvent {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ObscureTextChanged value) obscureTextChanged,
     required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +68,8 @@ mixin _$CreateBatchFormEvent {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +79,8 @@ mixin _$CreateBatchFormEvent {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -164,6 +176,8 @@ class _$BrachCodeChangedImpl implements _BrachCodeChanged {
     required TResult Function(String password) passwordChanged,
     required TResult Function() obscureTextChanged,
     required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
   }) {
     return brachCodeChanged(branchCode);
   }
@@ -176,6 +190,8 @@ class _$BrachCodeChangedImpl implements _BrachCodeChanged {
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? obscureTextChanged,
     TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
   }) {
     return brachCodeChanged?.call(branchCode);
   }
@@ -188,6 +204,8 @@ class _$BrachCodeChangedImpl implements _BrachCodeChanged {
     TResult Function(String password)? passwordChanged,
     TResult Function()? obscureTextChanged,
     TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (brachCodeChanged != null) {
@@ -204,6 +222,8 @@ class _$BrachCodeChangedImpl implements _BrachCodeChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ObscureTextChanged value) obscureTextChanged,
     required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return brachCodeChanged(this);
   }
@@ -216,6 +236,8 @@ class _$BrachCodeChangedImpl implements _BrachCodeChanged {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return brachCodeChanged?.call(this);
   }
@@ -228,6 +250,8 @@ class _$BrachCodeChangedImpl implements _BrachCodeChanged {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (brachCodeChanged != null) {
@@ -318,6 +342,8 @@ class _$BatchNumberChangedImpl implements _BatchNumberChanged {
     required TResult Function(String password) passwordChanged,
     required TResult Function() obscureTextChanged,
     required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
   }) {
     return batchNumberChanged(batchNumber);
   }
@@ -330,6 +356,8 @@ class _$BatchNumberChangedImpl implements _BatchNumberChanged {
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? obscureTextChanged,
     TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
   }) {
     return batchNumberChanged?.call(batchNumber);
   }
@@ -342,6 +370,8 @@ class _$BatchNumberChangedImpl implements _BatchNumberChanged {
     TResult Function(String password)? passwordChanged,
     TResult Function()? obscureTextChanged,
     TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (batchNumberChanged != null) {
@@ -358,6 +388,8 @@ class _$BatchNumberChangedImpl implements _BatchNumberChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ObscureTextChanged value) obscureTextChanged,
     required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return batchNumberChanged(this);
   }
@@ -370,6 +402,8 @@ class _$BatchNumberChangedImpl implements _BatchNumberChanged {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return batchNumberChanged?.call(this);
   }
@@ -382,6 +416,8 @@ class _$BatchNumberChangedImpl implements _BatchNumberChanged {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (batchNumberChanged != null) {
@@ -472,6 +508,8 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     required TResult Function(String password) passwordChanged,
     required TResult Function() obscureTextChanged,
     required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
   }) {
     return passwordChanged(password);
   }
@@ -484,6 +522,8 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? obscureTextChanged,
     TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
   }) {
     return passwordChanged?.call(password);
   }
@@ -496,6 +536,8 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult Function(String password)? passwordChanged,
     TResult Function()? obscureTextChanged,
     TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -512,6 +554,8 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ObscureTextChanged value) obscureTextChanged,
     required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return passwordChanged(this);
   }
@@ -524,6 +568,8 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return passwordChanged?.call(this);
   }
@@ -536,6 +582,8 @@ class _$PasswordChangedImpl implements _PasswordChanged {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -597,6 +645,8 @@ class _$ObscureTextChangedImpl implements _ObscureTextChanged {
     required TResult Function(String password) passwordChanged,
     required TResult Function() obscureTextChanged,
     required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
   }) {
     return obscureTextChanged();
   }
@@ -609,6 +659,8 @@ class _$ObscureTextChangedImpl implements _ObscureTextChanged {
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? obscureTextChanged,
     TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
   }) {
     return obscureTextChanged?.call();
   }
@@ -621,6 +673,8 @@ class _$ObscureTextChangedImpl implements _ObscureTextChanged {
     TResult Function(String password)? passwordChanged,
     TResult Function()? obscureTextChanged,
     TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (obscureTextChanged != null) {
@@ -637,6 +691,8 @@ class _$ObscureTextChangedImpl implements _ObscureTextChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ObscureTextChanged value) obscureTextChanged,
     required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return obscureTextChanged(this);
   }
@@ -649,6 +705,8 @@ class _$ObscureTextChangedImpl implements _ObscureTextChanged {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return obscureTextChanged?.call(this);
   }
@@ -661,6 +719,8 @@ class _$ObscureTextChangedImpl implements _ObscureTextChanged {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (obscureTextChanged != null) {
@@ -718,6 +778,8 @@ class _$CreateButtonPressedImpl implements _CreateButtonPressed {
     required TResult Function(String password) passwordChanged,
     required TResult Function() obscureTextChanged,
     required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
   }) {
     return createButtonPressed();
   }
@@ -730,6 +792,8 @@ class _$CreateButtonPressedImpl implements _CreateButtonPressed {
     TResult? Function(String password)? passwordChanged,
     TResult? Function()? obscureTextChanged,
     TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
   }) {
     return createButtonPressed?.call();
   }
@@ -742,6 +806,8 @@ class _$CreateButtonPressedImpl implements _CreateButtonPressed {
     TResult Function(String password)? passwordChanged,
     TResult Function()? obscureTextChanged,
     TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
     required TResult orElse(),
   }) {
     if (createButtonPressed != null) {
@@ -758,6 +824,8 @@ class _$CreateButtonPressedImpl implements _CreateButtonPressed {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ObscureTextChanged value) obscureTextChanged,
     required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
   }) {
     return createButtonPressed(this);
   }
@@ -770,6 +838,8 @@ class _$CreateButtonPressedImpl implements _CreateButtonPressed {
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
   }) {
     return createButtonPressed?.call(this);
   }
@@ -782,6 +852,8 @@ class _$CreateButtonPressedImpl implements _CreateButtonPressed {
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ObscureTextChanged value)? obscureTextChanged,
     TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
   }) {
     if (createButtonPressed != null) {
@@ -796,12 +868,277 @@ abstract class _CreateButtonPressed implements CreateBatchFormEvent {
 }
 
 /// @nodoc
+abstract class _$$AuthCheckRequestedImplCopyWith<$Res> {
+  factory _$$AuthCheckRequestedImplCopyWith(_$AuthCheckRequestedImpl value,
+          $Res Function(_$AuthCheckRequestedImpl) then) =
+      __$$AuthCheckRequestedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AuthCheckRequestedImplCopyWithImpl<$Res>
+    extends _$CreateBatchFormEventCopyWithImpl<$Res, _$AuthCheckRequestedImpl>
+    implements _$$AuthCheckRequestedImplCopyWith<$Res> {
+  __$$AuthCheckRequestedImplCopyWithImpl(_$AuthCheckRequestedImpl _value,
+      $Res Function(_$AuthCheckRequestedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
+  const _$AuthCheckRequestedImpl();
+
+  @override
+  String toString() {
+    return 'CreateBatchFormEvent.authCheckRequested()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AuthCheckRequestedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String branchCode) brachCodeChanged,
+    required TResult Function(String batchNumber) batchNumberChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function() obscureTextChanged,
+    required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
+  }) {
+    return authCheckRequested();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String branchCode)? brachCodeChanged,
+    TResult? Function(String batchNumber)? batchNumberChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function()? obscureTextChanged,
+    TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
+  }) {
+    return authCheckRequested?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String branchCode)? brachCodeChanged,
+    TResult Function(String batchNumber)? batchNumberChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? obscureTextChanged,
+    TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (authCheckRequested != null) {
+      return authCheckRequested();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BrachCodeChanged value) brachCodeChanged,
+    required TResult Function(_BatchNumberChanged value) batchNumberChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ObscureTextChanged value) obscureTextChanged,
+    required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
+  }) {
+    return authCheckRequested(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_BrachCodeChanged value)? brachCodeChanged,
+    TResult? Function(_BatchNumberChanged value)? batchNumberChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
+    TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
+  }) {
+    return authCheckRequested?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BrachCodeChanged value)? brachCodeChanged,
+    TResult Function(_BatchNumberChanged value)? batchNumberChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ObscureTextChanged value)? obscureTextChanged,
+    TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (authCheckRequested != null) {
+      return authCheckRequested(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AuthCheckRequested implements CreateBatchFormEvent {
+  const factory _AuthCheckRequested() = _$AuthCheckRequestedImpl;
+}
+
+/// @nodoc
+abstract class _$$RefreshTokenImplCopyWith<$Res> {
+  factory _$$RefreshTokenImplCopyWith(
+          _$RefreshTokenImpl value, $Res Function(_$RefreshTokenImpl) then) =
+      __$$RefreshTokenImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RefreshTokenImplCopyWithImpl<$Res>
+    extends _$CreateBatchFormEventCopyWithImpl<$Res, _$RefreshTokenImpl>
+    implements _$$RefreshTokenImplCopyWith<$Res> {
+  __$$RefreshTokenImplCopyWithImpl(
+      _$RefreshTokenImpl _value, $Res Function(_$RefreshTokenImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$RefreshTokenImpl implements _RefreshToken {
+  const _$RefreshTokenImpl();
+
+  @override
+  String toString() {
+    return 'CreateBatchFormEvent.refreshToken()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RefreshTokenImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String branchCode) brachCodeChanged,
+    required TResult Function(String batchNumber) batchNumberChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function() obscureTextChanged,
+    required TResult Function() createButtonPressed,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
+  }) {
+    return refreshToken();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String branchCode)? brachCodeChanged,
+    TResult? Function(String batchNumber)? batchNumberChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function()? obscureTextChanged,
+    TResult? Function()? createButtonPressed,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
+  }) {
+    return refreshToken?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String branchCode)? brachCodeChanged,
+    TResult Function(String batchNumber)? batchNumberChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? obscureTextChanged,
+    TResult Function()? createButtonPressed,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (refreshToken != null) {
+      return refreshToken();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BrachCodeChanged value) brachCodeChanged,
+    required TResult Function(_BatchNumberChanged value) batchNumberChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ObscureTextChanged value) obscureTextChanged,
+    required TResult Function(_CreateButtonPressed value) createButtonPressed,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
+  }) {
+    return refreshToken(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_BrachCodeChanged value)? brachCodeChanged,
+    TResult? Function(_BatchNumberChanged value)? batchNumberChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ObscureTextChanged value)? obscureTextChanged,
+    TResult? Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
+  }) {
+    return refreshToken?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BrachCodeChanged value)? brachCodeChanged,
+    TResult Function(_BatchNumberChanged value)? batchNumberChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ObscureTextChanged value)? obscureTextChanged,
+    TResult Function(_CreateButtonPressed value)? createButtonPressed,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (refreshToken != null) {
+      return refreshToken(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RefreshToken implements CreateBatchFormEvent {
+  const factory _RefreshToken() = _$RefreshTokenImpl;
+}
+
+/// @nodoc
 mixin _$CreateBatchFormState {
   bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get checkAuth => throw _privateConstructorUsedError;
   bool get hidePassword => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   BatchCredentials get batchCredentials => throw _privateConstructorUsedError;
-  Option<Either<Failure, Unit>> get failureOrSuccessOption =>
+  Option<Either<Failure, Batch>> get failureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -817,10 +1154,11 @@ abstract class $CreateBatchFormStateCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isSubmitting,
+      bool checkAuth,
       bool hidePassword,
       bool showValidationError,
       BatchCredentials batchCredentials,
-      Option<Either<Failure, Unit>> failureOrSuccessOption});
+      Option<Either<Failure, Batch>> failureOrSuccessOption});
 
   $BatchCredentialsCopyWith<$Res> get batchCredentials;
 }
@@ -840,6 +1178,7 @@ class _$CreateBatchFormStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? isSubmitting = null,
+    Object? checkAuth = null,
     Object? hidePassword = null,
     Object? showValidationError = null,
     Object? batchCredentials = null,
@@ -849,6 +1188,10 @@ class _$CreateBatchFormStateCopyWithImpl<$Res,
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      checkAuth: null == checkAuth
+          ? _value.checkAuth
+          : checkAuth // ignore: cast_nullable_to_non_nullable
               as bool,
       hidePassword: null == hidePassword
           ? _value.hidePassword
@@ -865,7 +1208,7 @@ class _$CreateBatchFormStateCopyWithImpl<$Res,
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, Unit>>,
+              as Option<Either<Failure, Batch>>,
     ) as $Val);
   }
 
@@ -888,10 +1231,11 @@ abstract class _$$CreateBatchFormStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool isSubmitting,
+      bool checkAuth,
       bool hidePassword,
       bool showValidationError,
       BatchCredentials batchCredentials,
-      Option<Either<Failure, Unit>> failureOrSuccessOption});
+      Option<Either<Failure, Batch>> failureOrSuccessOption});
 
   @override
   $BatchCredentialsCopyWith<$Res> get batchCredentials;
@@ -909,6 +1253,7 @@ class __$$CreateBatchFormStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isSubmitting = null,
+    Object? checkAuth = null,
     Object? hidePassword = null,
     Object? showValidationError = null,
     Object? batchCredentials = null,
@@ -918,6 +1263,10 @@ class __$$CreateBatchFormStateImplCopyWithImpl<$Res>
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      checkAuth: null == checkAuth
+          ? _value.checkAuth
+          : checkAuth // ignore: cast_nullable_to_non_nullable
               as bool,
       hidePassword: null == hidePassword
           ? _value.hidePassword
@@ -934,7 +1283,7 @@ class __$$CreateBatchFormStateImplCopyWithImpl<$Res>
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, Unit>>,
+              as Option<Either<Failure, Batch>>,
     ));
   }
 }
@@ -944,6 +1293,7 @@ class __$$CreateBatchFormStateImplCopyWithImpl<$Res>
 class _$CreateBatchFormStateImpl implements _CreateBatchFormState {
   const _$CreateBatchFormStateImpl(
       {required this.isSubmitting,
+      required this.checkAuth,
       required this.hidePassword,
       required this.showValidationError,
       required this.batchCredentials,
@@ -952,17 +1302,19 @@ class _$CreateBatchFormStateImpl implements _CreateBatchFormState {
   @override
   final bool isSubmitting;
   @override
+  final bool checkAuth;
+  @override
   final bool hidePassword;
   @override
   final bool showValidationError;
   @override
   final BatchCredentials batchCredentials;
   @override
-  final Option<Either<Failure, Unit>> failureOrSuccessOption;
+  final Option<Either<Failure, Batch>> failureOrSuccessOption;
 
   @override
   String toString() {
-    return 'CreateBatchFormState(isSubmitting: $isSubmitting, hidePassword: $hidePassword, showValidationError: $showValidationError, batchCredentials: $batchCredentials, failureOrSuccessOption: $failureOrSuccessOption)';
+    return 'CreateBatchFormState(isSubmitting: $isSubmitting, checkAuth: $checkAuth, hidePassword: $hidePassword, showValidationError: $showValidationError, batchCredentials: $batchCredentials, failureOrSuccessOption: $failureOrSuccessOption)';
   }
 
   @override
@@ -972,6 +1324,8 @@ class _$CreateBatchFormStateImpl implements _CreateBatchFormState {
             other is _$CreateBatchFormStateImpl &&
             (identical(other.isSubmitting, isSubmitting) ||
                 other.isSubmitting == isSubmitting) &&
+            (identical(other.checkAuth, checkAuth) ||
+                other.checkAuth == checkAuth) &&
             (identical(other.hidePassword, hidePassword) ||
                 other.hidePassword == hidePassword) &&
             (identical(other.showValidationError, showValidationError) ||
@@ -983,8 +1337,14 @@ class _$CreateBatchFormStateImpl implements _CreateBatchFormState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isSubmitting, hidePassword,
-      showValidationError, batchCredentials, failureOrSuccessOption);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isSubmitting,
+      checkAuth,
+      hidePassword,
+      showValidationError,
+      batchCredentials,
+      failureOrSuccessOption);
 
   @JsonKey(ignore: true)
   @override
@@ -998,14 +1358,17 @@ class _$CreateBatchFormStateImpl implements _CreateBatchFormState {
 abstract class _CreateBatchFormState implements CreateBatchFormState {
   const factory _CreateBatchFormState(
       {required final bool isSubmitting,
+      required final bool checkAuth,
       required final bool hidePassword,
       required final bool showValidationError,
       required final BatchCredentials batchCredentials,
-      required final Option<Either<Failure, Unit>>
+      required final Option<Either<Failure, Batch>>
           failureOrSuccessOption}) = _$CreateBatchFormStateImpl;
 
   @override
   bool get isSubmitting;
+  @override
+  bool get checkAuth;
   @override
   bool get hidePassword;
   @override
@@ -1013,7 +1376,7 @@ abstract class _CreateBatchFormState implements CreateBatchFormState {
   @override
   BatchCredentials get batchCredentials;
   @override
-  Option<Either<Failure, Unit>> get failureOrSuccessOption;
+  Option<Either<Failure, Batch>> get failureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
   _$$CreateBatchFormStateImplCopyWith<_$CreateBatchFormStateImpl>

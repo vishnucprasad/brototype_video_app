@@ -21,15 +21,13 @@ Batch _$BatchFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Batch {
   @JsonKey(name: '_id')
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'branchCode')
-  String? get branchCode => throw _privateConstructorUsedError;
+  String get branchCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'batchNumber')
-  int? get batchNumber => throw _privateConstructorUsedError;
+  int get batchNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'videos')
-  List<Video>? get videos => throw _privateConstructorUsedError;
-  String? get password => throw _privateConstructorUsedError;
-  String? get confirmationPassword => throw _privateConstructorUsedError;
+  List<Video> get videos => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,12 +40,10 @@ abstract class $BatchCopyWith<$Res> {
       _$BatchCopyWithImpl<$Res, Batch>;
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String? id,
-      @JsonKey(name: 'branchCode') String? branchCode,
-      @JsonKey(name: 'batchNumber') int? batchNumber,
-      @JsonKey(name: 'videos') List<Video>? videos,
-      String? password,
-      String? confirmationPassword});
+      {@JsonKey(name: '_id') String id,
+      @JsonKey(name: 'branchCode') String branchCode,
+      @JsonKey(name: 'batchNumber') int batchNumber,
+      @JsonKey(name: 'videos') List<Video> videos});
 }
 
 /// @nodoc
@@ -63,38 +59,28 @@ class _$BatchCopyWithImpl<$Res, $Val extends Batch>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? branchCode = freezed,
-    Object? batchNumber = freezed,
-    Object? videos = freezed,
-    Object? password = freezed,
-    Object? confirmationPassword = freezed,
+    Object? id = null,
+    Object? branchCode = null,
+    Object? batchNumber = null,
+    Object? videos = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      branchCode: freezed == branchCode
+              as String,
+      branchCode: null == branchCode
           ? _value.branchCode
           : branchCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      batchNumber: freezed == batchNumber
+              as String,
+      batchNumber: null == batchNumber
           ? _value.batchNumber
           : batchNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      videos: freezed == videos
+              as int,
+      videos: null == videos
           ? _value.videos
           : videos // ignore: cast_nullable_to_non_nullable
-              as List<Video>?,
-      password: freezed == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String?,
-      confirmationPassword: freezed == confirmationPassword
-          ? _value.confirmationPassword
-          : confirmationPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<Video>,
     ) as $Val);
   }
 }
@@ -107,12 +93,10 @@ abstract class _$$BatchImplCopyWith<$Res> implements $BatchCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String? id,
-      @JsonKey(name: 'branchCode') String? branchCode,
-      @JsonKey(name: 'batchNumber') int? batchNumber,
-      @JsonKey(name: 'videos') List<Video>? videos,
-      String? password,
-      String? confirmationPassword});
+      {@JsonKey(name: '_id') String id,
+      @JsonKey(name: 'branchCode') String branchCode,
+      @JsonKey(name: 'batchNumber') int batchNumber,
+      @JsonKey(name: 'videos') List<Video> videos});
 }
 
 /// @nodoc
@@ -126,38 +110,28 @@ class __$$BatchImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? branchCode = freezed,
-    Object? batchNumber = freezed,
-    Object? videos = freezed,
-    Object? password = freezed,
-    Object? confirmationPassword = freezed,
+    Object? id = null,
+    Object? branchCode = null,
+    Object? batchNumber = null,
+    Object? videos = null,
   }) {
     return _then(_$BatchImpl(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      branchCode: freezed == branchCode
+              as String,
+      branchCode: null == branchCode
           ? _value.branchCode
           : branchCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      batchNumber: freezed == batchNumber
+              as String,
+      batchNumber: null == batchNumber
           ? _value.batchNumber
           : batchNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      videos: freezed == videos
+              as int,
+      videos: null == videos
           ? _value._videos
           : videos // ignore: cast_nullable_to_non_nullable
-              as List<Video>?,
-      password: freezed == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String?,
-      confirmationPassword: freezed == confirmationPassword
-          ? _value.confirmationPassword
-          : confirmationPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<Video>,
     ));
   }
 }
@@ -169,9 +143,7 @@ class _$BatchImpl implements _Batch {
       {@JsonKey(name: '_id') required this.id,
       @JsonKey(name: 'branchCode') required this.branchCode,
       @JsonKey(name: 'batchNumber') required this.batchNumber,
-      @JsonKey(name: 'videos') required final List<Video>? videos,
-      required this.password,
-      this.confirmationPassword})
+      @JsonKey(name: 'videos') required final List<Video> videos})
       : _videos = videos;
 
   factory _$BatchImpl.fromJson(Map<String, dynamic> json) =>
@@ -179,32 +151,25 @@ class _$BatchImpl implements _Batch {
 
   @override
   @JsonKey(name: '_id')
-  final String? id;
+  final String id;
   @override
   @JsonKey(name: 'branchCode')
-  final String? branchCode;
+  final String branchCode;
   @override
   @JsonKey(name: 'batchNumber')
-  final int? batchNumber;
-  final List<Video>? _videos;
+  final int batchNumber;
+  final List<Video> _videos;
   @override
   @JsonKey(name: 'videos')
-  List<Video>? get videos {
-    final value = _videos;
-    if (value == null) return null;
+  List<Video> get videos {
     if (_videos is EqualUnmodifiableListView) return _videos;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_videos);
   }
 
   @override
-  final String? password;
-  @override
-  final String? confirmationPassword;
-
-  @override
   String toString() {
-    return 'Batch(id: $id, branchCode: $branchCode, batchNumber: $batchNumber, videos: $videos, password: $password, confirmationPassword: $confirmationPassword)';
+    return 'Batch(id: $id, branchCode: $branchCode, batchNumber: $batchNumber, videos: $videos)';
   }
 
   @override
@@ -217,23 +182,13 @@ class _$BatchImpl implements _Batch {
                 other.branchCode == branchCode) &&
             (identical(other.batchNumber, batchNumber) ||
                 other.batchNumber == batchNumber) &&
-            const DeepCollectionEquality().equals(other._videos, _videos) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.confirmationPassword, confirmationPassword) ||
-                other.confirmationPassword == confirmationPassword));
+            const DeepCollectionEquality().equals(other._videos, _videos));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      branchCode,
-      batchNumber,
-      const DeepCollectionEquality().hash(_videos),
-      password,
-      confirmationPassword);
+  int get hashCode => Object.hash(runtimeType, id, branchCode, batchNumber,
+      const DeepCollectionEquality().hash(_videos));
 
   @JsonKey(ignore: true)
   @override
@@ -251,31 +206,26 @@ class _$BatchImpl implements _Batch {
 
 abstract class _Batch implements Batch {
   const factory _Batch(
-      {@JsonKey(name: '_id') required final String? id,
-      @JsonKey(name: 'branchCode') required final String? branchCode,
-      @JsonKey(name: 'batchNumber') required final int? batchNumber,
-      @JsonKey(name: 'videos') required final List<Video>? videos,
-      required final String? password,
-      final String? confirmationPassword}) = _$BatchImpl;
+          {@JsonKey(name: '_id') required final String id,
+          @JsonKey(name: 'branchCode') required final String branchCode,
+          @JsonKey(name: 'batchNumber') required final int batchNumber,
+          @JsonKey(name: 'videos') required final List<Video> videos}) =
+      _$BatchImpl;
 
   factory _Batch.fromJson(Map<String, dynamic> json) = _$BatchImpl.fromJson;
 
   @override
   @JsonKey(name: '_id')
-  String? get id;
+  String get id;
   @override
   @JsonKey(name: 'branchCode')
-  String? get branchCode;
+  String get branchCode;
   @override
   @JsonKey(name: 'batchNumber')
-  int? get batchNumber;
+  int get batchNumber;
   @override
   @JsonKey(name: 'videos')
-  List<Video>? get videos;
-  @override
-  String? get password;
-  @override
-  String? get confirmationPassword;
+  List<Video> get videos;
   @override
   @JsonKey(ignore: true)
   _$$BatchImplCopyWith<_$BatchImpl> get copyWith =>

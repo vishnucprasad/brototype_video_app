@@ -9,12 +9,10 @@ part 'batch.g.dart';
 @freezed
 class Batch with _$Batch {
   const factory Batch({
-    @JsonKey(name: '_id') required String? id,
-    @JsonKey(name: 'branchCode') required String? branchCode,
-    @JsonKey(name: 'batchNumber') required int? batchNumber,
-    @JsonKey(name: 'videos') required List<Video>? videos,
-    required String? password,
-    String? confirmationPassword,
+    @JsonKey(name: '_id') required String id,
+    @JsonKey(name: 'branchCode') required String branchCode,
+    @JsonKey(name: 'batchNumber') required int batchNumber,
+    @JsonKey(name: 'videos') required List<Video> videos,
   }) = _Batch;
 
   factory Batch.fromJson(Map<String, dynamic> json) => _$BatchFromJson(json);

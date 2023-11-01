@@ -27,7 +27,7 @@ class CreateBatchListener extends StatelessWidget {
                 orElse: () => null,
               );
             },
-            (_) => null, // Authenticated event goes here,
+            (_) => null, // Batch created event goes here
           ),
         );
       },

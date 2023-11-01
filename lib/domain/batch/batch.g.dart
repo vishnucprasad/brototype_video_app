@@ -7,14 +7,12 @@ part of 'batch.dart';
 // **************************************************************************
 
 _$BatchImpl _$$BatchImplFromJson(Map<String, dynamic> json) => _$BatchImpl(
-      id: json['_id'] as String?,
-      branchCode: json['branchCode'] as String?,
-      batchNumber: json['batchNumber'] as int?,
-      videos: (json['videos'] as List<dynamic>?)
-          ?.map((e) => Video.fromJson(e as Map<String, dynamic>))
+      id: json['_id'] as String,
+      branchCode: json['branchCode'] as String,
+      batchNumber: json['batchNumber'] as int,
+      videos: (json['videos'] as List<dynamic>)
+          .map((e) => Video.fromJson(e as Map<String, dynamic>))
           .toList(),
-      password: json['password'] as String?,
-      confirmationPassword: json['confirmationPassword'] as String?,
     );
 
 Map<String, dynamic> _$$BatchImplToJson(_$BatchImpl instance) =>
@@ -23,6 +21,4 @@ Map<String, dynamic> _$$BatchImplToJson(_$BatchImpl instance) =>
       'branchCode': instance.branchCode,
       'batchNumber': instance.batchNumber,
       'videos': instance.videos,
-      'password': instance.password,
-      'confirmationPassword': instance.confirmationPassword,
     };
