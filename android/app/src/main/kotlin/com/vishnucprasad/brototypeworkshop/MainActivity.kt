@@ -1,4 +1,4 @@
-package com.example.brototype_video_app
+package com.vishnucprasad.brototypeworkshop
 
 import io.flutter.embedding.android.FlutterActivity
 
