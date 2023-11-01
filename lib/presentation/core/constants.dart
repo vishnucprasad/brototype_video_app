@@ -34,3 +34,7 @@ const kHeightExtraLarge = SizedBox(
 // logs
 const kLightLogo = AssetImage("assets/logo/logo-white.png");
 const kDarkLogo = AssetImage("assets/logo/logo-black.png");
+
+// default video thumbnail
+const kDefaultThumbnail =
+    "https://res.cloudinary.com/dfd1megv2/image/upload/v1674831310/logo_bc6qjz.jpg";

@@ -11,7 +11,7 @@ class AppScaffold extends StatelessWidget {
   });
 
   final Widget body;
-  final FloatingActionButton? floatingActionButton;
+  final Widget? floatingActionButton;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
 
   @override

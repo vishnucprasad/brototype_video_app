@@ -58,8 +58,8 @@ class AdminUsernameField extends HookWidget {
               ),
             ),
             hintText: "Username",
-            hintStyle: const TextStyle(
-              color: kGreyColor,
+            hintStyle: TextStyle(
+              color: context.isDarkMode ? kGreyColor : kBlackColor,
             ),
             prefixIcon: Icon(
               Icons.person,
