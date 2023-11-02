@@ -7,7 +7,7 @@ class WebSocketState with _$WebSocketState {
     required String? socketId,
     required WebSocketStatus status,
     required Batch? batch,
-    required bool isSignedOut,
+    required bool isLoggedOut,
   }) = _WebSocketState;
 
   factory WebSocketState.initial() {
@@ -16,7 +16,7 @@ class WebSocketState with _$WebSocketState {
       socketId: null,
       status: WebSocketStatus.initial,
       batch: null,
-      isSignedOut: false,
+      isLoggedOut: false,
     );
   }
 }

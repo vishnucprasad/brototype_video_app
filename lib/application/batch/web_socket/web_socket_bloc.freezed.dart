@@ -28,7 +28,7 @@ mixin _$WebSocketEvent {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,7 +43,7 @@ mixin _$WebSocketEvent {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,7 +58,7 @@ mixin _$WebSocketEvent {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -74,7 +74,7 @@ mixin _$WebSocketEvent {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,7 +89,7 @@ mixin _$WebSocketEvent {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -104,7 +104,7 @@ mixin _$WebSocketEvent {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -202,7 +202,7 @@ class _$ConnectImpl implements _Connect {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return connect(roomId);
   }
@@ -220,7 +220,7 @@ class _$ConnectImpl implements _Connect {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return connect?.call(roomId);
   }
@@ -238,7 +238,7 @@ class _$ConnectImpl implements _Connect {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (connect != null) {
@@ -260,7 +260,7 @@ class _$ConnectImpl implements _Connect {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return connect(this);
   }
@@ -278,7 +278,7 @@ class _$ConnectImpl implements _Connect {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return connect?.call(this);
   }
@@ -296,7 +296,7 @@ class _$ConnectImpl implements _Connect {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (connect != null) {
@@ -363,7 +363,7 @@ class _$DisconnectImpl implements _Disconnect {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return disconnect();
   }
@@ -381,7 +381,7 @@ class _$DisconnectImpl implements _Disconnect {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return disconnect?.call();
   }
@@ -399,7 +399,7 @@ class _$DisconnectImpl implements _Disconnect {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (disconnect != null) {
@@ -421,7 +421,7 @@ class _$DisconnectImpl implements _Disconnect {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return disconnect(this);
   }
@@ -439,7 +439,7 @@ class _$DisconnectImpl implements _Disconnect {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return disconnect?.call(this);
   }
@@ -457,7 +457,7 @@ class _$DisconnectImpl implements _Disconnect {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (disconnect != null) {
@@ -519,7 +519,7 @@ class _$OnConnectingImpl implements _OnConnecting {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return onConnecting();
   }
@@ -537,7 +537,7 @@ class _$OnConnectingImpl implements _OnConnecting {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return onConnecting?.call();
   }
@@ -555,7 +555,7 @@ class _$OnConnectingImpl implements _OnConnecting {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnecting != null) {
@@ -577,7 +577,7 @@ class _$OnConnectingImpl implements _OnConnecting {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return onConnecting(this);
   }
@@ -595,7 +595,7 @@ class _$OnConnectingImpl implements _OnConnecting {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return onConnecting?.call(this);
   }
@@ -613,7 +613,7 @@ class _$OnConnectingImpl implements _OnConnecting {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnecting != null) {
@@ -675,7 +675,7 @@ class _$OnConnectImpl implements _OnConnect {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return onConnect();
   }
@@ -693,7 +693,7 @@ class _$OnConnectImpl implements _OnConnect {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return onConnect?.call();
   }
@@ -711,7 +711,7 @@ class _$OnConnectImpl implements _OnConnect {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnect != null) {
@@ -733,7 +733,7 @@ class _$OnConnectImpl implements _OnConnect {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return onConnect(this);
   }
@@ -751,7 +751,7 @@ class _$OnConnectImpl implements _OnConnect {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return onConnect?.call(this);
   }
@@ -769,7 +769,7 @@ class _$OnConnectImpl implements _OnConnect {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnect != null) {
@@ -831,7 +831,7 @@ class _$OnDisconnectImpl implements _OnDisconnect {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return onDisconnect();
   }
@@ -849,7 +849,7 @@ class _$OnDisconnectImpl implements _OnDisconnect {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return onDisconnect?.call();
   }
@@ -867,7 +867,7 @@ class _$OnDisconnectImpl implements _OnDisconnect {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (onDisconnect != null) {
@@ -889,7 +889,7 @@ class _$OnDisconnectImpl implements _OnDisconnect {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return onDisconnect(this);
   }
@@ -907,7 +907,7 @@ class _$OnDisconnectImpl implements _OnDisconnect {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return onDisconnect?.call(this);
   }
@@ -925,7 +925,7 @@ class _$OnDisconnectImpl implements _OnDisconnect {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (onDisconnect != null) {
@@ -987,7 +987,7 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return onConnectError();
   }
@@ -1005,7 +1005,7 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return onConnectError?.call();
   }
@@ -1023,7 +1023,7 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnectError != null) {
@@ -1045,7 +1045,7 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return onConnectError(this);
   }
@@ -1063,7 +1063,7 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return onConnectError?.call(this);
   }
@@ -1081,7 +1081,7 @@ class _$OnConnectErrorImpl implements _OnConnectError {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnectError != null) {
@@ -1143,7 +1143,7 @@ class _$OnConnectTimeoutImpl implements _OnConnectTimeout {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return onConnectTimeout();
   }
@@ -1161,7 +1161,7 @@ class _$OnConnectTimeoutImpl implements _OnConnectTimeout {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return onConnectTimeout?.call();
   }
@@ -1179,7 +1179,7 @@ class _$OnConnectTimeoutImpl implements _OnConnectTimeout {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnectTimeout != null) {
@@ -1201,7 +1201,7 @@ class _$OnConnectTimeoutImpl implements _OnConnectTimeout {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return onConnectTimeout(this);
   }
@@ -1219,7 +1219,7 @@ class _$OnConnectTimeoutImpl implements _OnConnectTimeout {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return onConnectTimeout?.call(this);
   }
@@ -1237,7 +1237,7 @@ class _$OnConnectTimeoutImpl implements _OnConnectTimeout {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (onConnectTimeout != null) {
@@ -1299,7 +1299,7 @@ class _$OnErrorImpl implements _OnError {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return onError();
   }
@@ -1317,7 +1317,7 @@ class _$OnErrorImpl implements _OnError {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return onError?.call();
   }
@@ -1335,7 +1335,7 @@ class _$OnErrorImpl implements _OnError {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (onError != null) {
@@ -1357,7 +1357,7 @@ class _$OnErrorImpl implements _OnError {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return onError(this);
   }
@@ -1375,7 +1375,7 @@ class _$OnErrorImpl implements _OnError {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return onError?.call(this);
   }
@@ -1393,7 +1393,7 @@ class _$OnErrorImpl implements _OnError {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (onError != null) {
@@ -1455,7 +1455,7 @@ class _$OnJoinedImpl implements _OnJoined {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return onJoined();
   }
@@ -1473,7 +1473,7 @@ class _$OnJoinedImpl implements _OnJoined {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return onJoined?.call();
   }
@@ -1491,7 +1491,7 @@ class _$OnJoinedImpl implements _OnJoined {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (onJoined != null) {
@@ -1513,7 +1513,7 @@ class _$OnJoinedImpl implements _OnJoined {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return onJoined(this);
   }
@@ -1531,7 +1531,7 @@ class _$OnJoinedImpl implements _OnJoined {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return onJoined?.call(this);
   }
@@ -1549,7 +1549,7 @@ class _$OnJoinedImpl implements _OnJoined {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (onJoined != null) {
@@ -1643,7 +1643,7 @@ class _$BatchUpdateImpl implements _BatchUpdate {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
     return batchUpdate(data);
   }
@@ -1661,7 +1661,7 @@ class _$BatchUpdateImpl implements _BatchUpdate {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
     return batchUpdate?.call(data);
   }
@@ -1679,7 +1679,7 @@ class _$BatchUpdateImpl implements _BatchUpdate {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (batchUpdate != null) {
@@ -1701,7 +1701,7 @@ class _$BatchUpdateImpl implements _BatchUpdate {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return batchUpdate(this);
   }
@@ -1719,7 +1719,7 @@ class _$BatchUpdateImpl implements _BatchUpdate {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return batchUpdate?.call(this);
   }
@@ -1737,7 +1737,7 @@ class _$BatchUpdateImpl implements _BatchUpdate {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (batchUpdate != null) {
@@ -1758,35 +1758,35 @@ abstract class _BatchUpdate implements WebSocketEvent {
 }
 
 /// @nodoc
-abstract class _$$SignoutImplCopyWith<$Res> {
-  factory _$$SignoutImplCopyWith(
-          _$SignoutImpl value, $Res Function(_$SignoutImpl) then) =
-      __$$SignoutImplCopyWithImpl<$Res>;
+abstract class _$$LoggedOutImplCopyWith<$Res> {
+  factory _$$LoggedOutImplCopyWith(
+          _$LoggedOutImpl value, $Res Function(_$LoggedOutImpl) then) =
+      __$$LoggedOutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SignoutImplCopyWithImpl<$Res>
-    extends _$WebSocketEventCopyWithImpl<$Res, _$SignoutImpl>
-    implements _$$SignoutImplCopyWith<$Res> {
-  __$$SignoutImplCopyWithImpl(
-      _$SignoutImpl _value, $Res Function(_$SignoutImpl) _then)
+class __$$LoggedOutImplCopyWithImpl<$Res>
+    extends _$WebSocketEventCopyWithImpl<$Res, _$LoggedOutImpl>
+    implements _$$LoggedOutImplCopyWith<$Res> {
+  __$$LoggedOutImplCopyWithImpl(
+      _$LoggedOutImpl _value, $Res Function(_$LoggedOutImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SignoutImpl implements _Signout {
-  const _$SignoutImpl();
+class _$LoggedOutImpl implements _LoggedOut {
+  const _$LoggedOutImpl();
 
   @override
   String toString() {
-    return 'WebSocketEvent.signout()';
+    return 'WebSocketEvent.loggedOut()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SignoutImpl);
+        (other.runtimeType == runtimeType && other is _$LoggedOutImpl);
   }
 
   @override
@@ -1805,9 +1805,9 @@ class _$SignoutImpl implements _Signout {
     required TResult Function() onError,
     required TResult Function() onJoined,
     required TResult Function(Map<String, dynamic> data) batchUpdate,
-    required TResult Function() signout,
+    required TResult Function() loggedOut,
   }) {
-    return signout();
+    return loggedOut();
   }
 
   @override
@@ -1823,9 +1823,9 @@ class _$SignoutImpl implements _Signout {
     TResult? Function()? onError,
     TResult? Function()? onJoined,
     TResult? Function(Map<String, dynamic> data)? batchUpdate,
-    TResult? Function()? signout,
+    TResult? Function()? loggedOut,
   }) {
-    return signout?.call();
+    return loggedOut?.call();
   }
 
   @override
@@ -1841,11 +1841,11 @@ class _$SignoutImpl implements _Signout {
     TResult Function()? onError,
     TResult Function()? onJoined,
     TResult Function(Map<String, dynamic> data)? batchUpdate,
-    TResult Function()? signout,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
-    if (signout != null) {
-      return signout();
+    if (loggedOut != null) {
+      return loggedOut();
     }
     return orElse();
   }
@@ -1863,9 +1863,9 @@ class _$SignoutImpl implements _Signout {
     required TResult Function(_OnError value) onError,
     required TResult Function(_OnJoined value) onJoined,
     required TResult Function(_BatchUpdate value) batchUpdate,
-    required TResult Function(_Signout value) signout,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
-    return signout(this);
+    return loggedOut(this);
   }
 
   @override
@@ -1881,9 +1881,9 @@ class _$SignoutImpl implements _Signout {
     TResult? Function(_OnError value)? onError,
     TResult? Function(_OnJoined value)? onJoined,
     TResult? Function(_BatchUpdate value)? batchUpdate,
-    TResult? Function(_Signout value)? signout,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
-    return signout?.call(this);
+    return loggedOut?.call(this);
   }
 
   @override
@@ -1899,18 +1899,18 @@ class _$SignoutImpl implements _Signout {
     TResult Function(_OnError value)? onError,
     TResult Function(_OnJoined value)? onJoined,
     TResult Function(_BatchUpdate value)? batchUpdate,
-    TResult Function(_Signout value)? signout,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
-    if (signout != null) {
-      return signout(this);
+    if (loggedOut != null) {
+      return loggedOut(this);
     }
     return orElse();
   }
 }
 
-abstract class _Signout implements WebSocketEvent {
-  const factory _Signout() = _$SignoutImpl;
+abstract class _LoggedOut implements WebSocketEvent {
+  const factory _LoggedOut() = _$LoggedOutImpl;
 }
 
 /// @nodoc
@@ -1919,7 +1919,7 @@ mixin _$WebSocketState {
   String? get socketId => throw _privateConstructorUsedError;
   WebSocketStatus get status => throw _privateConstructorUsedError;
   Batch? get batch => throw _privateConstructorUsedError;
-  bool get isSignedOut => throw _privateConstructorUsedError;
+  bool get isLoggedOut => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WebSocketStateCopyWith<WebSocketState> get copyWith =>
@@ -1937,7 +1937,7 @@ abstract class $WebSocketStateCopyWith<$Res> {
       String? socketId,
       WebSocketStatus status,
       Batch? batch,
-      bool isSignedOut});
+      bool isLoggedOut});
 
   $BatchCopyWith<$Res>? get batch;
 }
@@ -1959,7 +1959,7 @@ class _$WebSocketStateCopyWithImpl<$Res, $Val extends WebSocketState>
     Object? socketId = freezed,
     Object? status = null,
     Object? batch = freezed,
-    Object? isSignedOut = null,
+    Object? isLoggedOut = null,
   }) {
     return _then(_value.copyWith(
       roomId: freezed == roomId
@@ -1978,9 +1978,9 @@ class _$WebSocketStateCopyWithImpl<$Res, $Val extends WebSocketState>
           ? _value.batch
           : batch // ignore: cast_nullable_to_non_nullable
               as Batch?,
-      isSignedOut: null == isSignedOut
-          ? _value.isSignedOut
-          : isSignedOut // ignore: cast_nullable_to_non_nullable
+      isLoggedOut: null == isLoggedOut
+          ? _value.isLoggedOut
+          : isLoggedOut // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -2011,7 +2011,7 @@ abstract class _$$WebSocketStateImplCopyWith<$Res>
       String? socketId,
       WebSocketStatus status,
       Batch? batch,
-      bool isSignedOut});
+      bool isLoggedOut});
 
   @override
   $BatchCopyWith<$Res>? get batch;
@@ -2032,7 +2032,7 @@ class __$$WebSocketStateImplCopyWithImpl<$Res>
     Object? socketId = freezed,
     Object? status = null,
     Object? batch = freezed,
-    Object? isSignedOut = null,
+    Object? isLoggedOut = null,
   }) {
     return _then(_$WebSocketStateImpl(
       roomId: freezed == roomId
@@ -2051,9 +2051,9 @@ class __$$WebSocketStateImplCopyWithImpl<$Res>
           ? _value.batch
           : batch // ignore: cast_nullable_to_non_nullable
               as Batch?,
-      isSignedOut: null == isSignedOut
-          ? _value.isSignedOut
-          : isSignedOut // ignore: cast_nullable_to_non_nullable
+      isLoggedOut: null == isLoggedOut
+          ? _value.isLoggedOut
+          : isLoggedOut // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -2067,7 +2067,7 @@ class _$WebSocketStateImpl implements _WebSocketState {
       required this.socketId,
       required this.status,
       required this.batch,
-      required this.isSignedOut});
+      required this.isLoggedOut});
 
   @override
   final String? roomId;
@@ -2078,11 +2078,11 @@ class _$WebSocketStateImpl implements _WebSocketState {
   @override
   final Batch? batch;
   @override
-  final bool isSignedOut;
+  final bool isLoggedOut;
 
   @override
   String toString() {
-    return 'WebSocketState(roomId: $roomId, socketId: $socketId, status: $status, batch: $batch, isSignedOut: $isSignedOut)';
+    return 'WebSocketState(roomId: $roomId, socketId: $socketId, status: $status, batch: $batch, isLoggedOut: $isLoggedOut)';
   }
 
   @override
@@ -2095,13 +2095,13 @@ class _$WebSocketStateImpl implements _WebSocketState {
                 other.socketId == socketId) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.batch, batch) || other.batch == batch) &&
-            (identical(other.isSignedOut, isSignedOut) ||
-                other.isSignedOut == isSignedOut));
+            (identical(other.isLoggedOut, isLoggedOut) ||
+                other.isLoggedOut == isLoggedOut));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, roomId, socketId, status, batch, isSignedOut);
+      Object.hash(runtimeType, roomId, socketId, status, batch, isLoggedOut);
 
   @JsonKey(ignore: true)
   @override
@@ -2117,7 +2117,7 @@ abstract class _WebSocketState implements WebSocketState {
       required final String? socketId,
       required final WebSocketStatus status,
       required final Batch? batch,
-      required final bool isSignedOut}) = _$WebSocketStateImpl;
+      required final bool isLoggedOut}) = _$WebSocketStateImpl;
 
   @override
   String? get roomId;
@@ -2128,7 +2128,7 @@ abstract class _WebSocketState implements WebSocketState {
   @override
   Batch? get batch;
   @override
-  bool get isSignedOut;
+  bool get isLoggedOut;
   @override
   @JsonKey(ignore: true)
   _$$WebSocketStateImplCopyWith<_$WebSocketStateImpl> get copyWith =>

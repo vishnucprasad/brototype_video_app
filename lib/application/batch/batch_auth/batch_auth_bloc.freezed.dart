@@ -21,6 +21,7 @@ mixin _$BatchAuthEvent {
     required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
+    required TResult Function() loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$BatchAuthEvent {
     TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
+    TResult? Function()? loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$BatchAuthEvent {
     TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$BatchAuthEvent {
     required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$BatchAuthEvent {
     TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$BatchAuthEvent {
     TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,6 +127,7 @@ class _$UserAuthenticatedImpl implements _UserAuthenticated {
     required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
+    required TResult Function() loggedOut,
   }) {
     return userAuthenticated();
   }
@@ -131,6 +138,7 @@ class _$UserAuthenticatedImpl implements _UserAuthenticated {
     TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
+    TResult? Function()? loggedOut,
   }) {
     return userAuthenticated?.call();
   }
@@ -141,6 +149,7 @@ class _$UserAuthenticatedImpl implements _UserAuthenticated {
     TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (userAuthenticated != null) {
@@ -155,6 +164,7 @@ class _$UserAuthenticatedImpl implements _UserAuthenticated {
     required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return userAuthenticated(this);
   }
@@ -165,6 +175,7 @@ class _$UserAuthenticatedImpl implements _UserAuthenticated {
     TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return userAuthenticated?.call(this);
   }
@@ -175,6 +186,7 @@ class _$UserAuthenticatedImpl implements _UserAuthenticated {
     TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (userAuthenticated != null) {
@@ -229,6 +241,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
     required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
+    required TResult Function() loggedOut,
   }) {
     return authCheckRequested();
   }
@@ -239,6 +252,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
     TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
+    TResult? Function()? loggedOut,
   }) {
     return authCheckRequested?.call();
   }
@@ -249,6 +263,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
     TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (authCheckRequested != null) {
@@ -263,6 +278,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
     required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return authCheckRequested(this);
   }
@@ -273,6 +289,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
     TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return authCheckRequested?.call(this);
   }
@@ -283,6 +300,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
     TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (authCheckRequested != null) {
@@ -337,6 +355,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
     required TResult Function() userAuthenticated,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
+    required TResult Function() loggedOut,
   }) {
     return refreshToken();
   }
@@ -347,6 +366,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
     TResult? Function()? userAuthenticated,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
+    TResult? Function()? loggedOut,
   }) {
     return refreshToken?.call();
   }
@@ -357,6 +377,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
     TResult Function()? userAuthenticated,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
+    TResult Function()? loggedOut,
     required TResult orElse(),
   }) {
     if (refreshToken != null) {
@@ -371,6 +392,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
     required TResult Function(_UserAuthenticated value) userAuthenticated,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_LoggedOut value) loggedOut,
   }) {
     return refreshToken(this);
   }
@@ -381,6 +403,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
     TResult? Function(_UserAuthenticated value)? userAuthenticated,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_LoggedOut value)? loggedOut,
   }) {
     return refreshToken?.call(this);
   }
@@ -391,6 +414,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
     TResult Function(_UserAuthenticated value)? userAuthenticated,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_LoggedOut value)? loggedOut,
     required TResult orElse(),
   }) {
     if (refreshToken != null) {
@@ -402,6 +426,120 @@ class _$RefreshTokenImpl implements _RefreshToken {
 
 abstract class _RefreshToken implements BatchAuthEvent {
   const factory _RefreshToken() = _$RefreshTokenImpl;
+}
+
+/// @nodoc
+abstract class _$$LoggedOutImplCopyWith<$Res> {
+  factory _$$LoggedOutImplCopyWith(
+          _$LoggedOutImpl value, $Res Function(_$LoggedOutImpl) then) =
+      __$$LoggedOutImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoggedOutImplCopyWithImpl<$Res>
+    extends _$BatchAuthEventCopyWithImpl<$Res, _$LoggedOutImpl>
+    implements _$$LoggedOutImplCopyWith<$Res> {
+  __$$LoggedOutImplCopyWithImpl(
+      _$LoggedOutImpl _value, $Res Function(_$LoggedOutImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoggedOutImpl implements _LoggedOut {
+  const _$LoggedOutImpl();
+
+  @override
+  String toString() {
+    return 'BatchAuthEvent.loggedOut()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoggedOutImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() userAuthenticated,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
+    required TResult Function() loggedOut,
+  }) {
+    return loggedOut();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? userAuthenticated,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
+    TResult? Function()? loggedOut,
+  }) {
+    return loggedOut?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? userAuthenticated,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
+    TResult Function()? loggedOut,
+    required TResult orElse(),
+  }) {
+    if (loggedOut != null) {
+      return loggedOut();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UserAuthenticated value) userAuthenticated,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
+    required TResult Function(_LoggedOut value) loggedOut,
+  }) {
+    return loggedOut(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UserAuthenticated value)? userAuthenticated,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
+    TResult? Function(_LoggedOut value)? loggedOut,
+  }) {
+    return loggedOut?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UserAuthenticated value)? userAuthenticated,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
+    TResult Function(_LoggedOut value)? loggedOut,
+    required TResult orElse(),
+  }) {
+    if (loggedOut != null) {
+      return loggedOut(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoggedOut implements BatchAuthEvent {
+  const factory _LoggedOut() = _$LoggedOutImpl;
 }
 
 /// @nodoc

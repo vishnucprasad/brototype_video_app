@@ -46,6 +46,9 @@ class BatchBloc extends Bloc<BatchEvent, BatchState> {
             )),
           );
         },
+        setBatch: (e) async => emit(state.copyWith(
+          batch: e.batch,
+        )),
         authCheckRequested: (_) async => emit(state.copyWith(
           checkAuth: false,
         )),

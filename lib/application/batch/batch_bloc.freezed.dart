@@ -19,6 +19,7 @@ mixin _$BatchEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getBatchDetails,
+    required TResult Function(Batch batch) setBatch,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
   }) =>
@@ -26,6 +27,7 @@ mixin _$BatchEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getBatchDetails,
+    TResult? Function(Batch batch)? setBatch,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
   }) =>
@@ -33,6 +35,7 @@ mixin _$BatchEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getBatchDetails,
+    TResult Function(Batch batch)? setBatch,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     required TResult orElse(),
@@ -41,6 +44,7 @@ mixin _$BatchEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetBatchDetails value) getBatchDetails,
+    required TResult Function(_SetBatch value) setBatch,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
   }) =>
@@ -48,6 +52,7 @@ mixin _$BatchEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetBatchDetails value)? getBatchDetails,
+    TResult? Function(_SetBatch value)? setBatch,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
   }) =>
@@ -55,6 +60,7 @@ mixin _$BatchEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetBatchDetails value)? getBatchDetails,
+    TResult Function(_SetBatch value)? setBatch,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
@@ -119,6 +125,7 @@ class _$GetBatchDetailsImpl implements _GetBatchDetails {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getBatchDetails,
+    required TResult Function(Batch batch) setBatch,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
   }) {
@@ -129,6 +136,7 @@ class _$GetBatchDetailsImpl implements _GetBatchDetails {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getBatchDetails,
+    TResult? Function(Batch batch)? setBatch,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
   }) {
@@ -139,6 +147,7 @@ class _$GetBatchDetailsImpl implements _GetBatchDetails {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getBatchDetails,
+    TResult Function(Batch batch)? setBatch,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     required TResult orElse(),
@@ -153,6 +162,7 @@ class _$GetBatchDetailsImpl implements _GetBatchDetails {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetBatchDetails value) getBatchDetails,
+    required TResult Function(_SetBatch value) setBatch,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
   }) {
@@ -163,6 +173,7 @@ class _$GetBatchDetailsImpl implements _GetBatchDetails {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetBatchDetails value)? getBatchDetails,
+    TResult? Function(_SetBatch value)? setBatch,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
   }) {
@@ -173,6 +184,7 @@ class _$GetBatchDetailsImpl implements _GetBatchDetails {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetBatchDetails value)? getBatchDetails,
+    TResult Function(_SetBatch value)? setBatch,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
@@ -186,6 +198,161 @@ class _$GetBatchDetailsImpl implements _GetBatchDetails {
 
 abstract class _GetBatchDetails implements BatchEvent {
   const factory _GetBatchDetails() = _$GetBatchDetailsImpl;
+}
+
+/// @nodoc
+abstract class _$$SetBatchImplCopyWith<$Res> {
+  factory _$$SetBatchImplCopyWith(
+          _$SetBatchImpl value, $Res Function(_$SetBatchImpl) then) =
+      __$$SetBatchImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Batch batch});
+
+  $BatchCopyWith<$Res> get batch;
+}
+
+/// @nodoc
+class __$$SetBatchImplCopyWithImpl<$Res>
+    extends _$BatchEventCopyWithImpl<$Res, _$SetBatchImpl>
+    implements _$$SetBatchImplCopyWith<$Res> {
+  __$$SetBatchImplCopyWithImpl(
+      _$SetBatchImpl _value, $Res Function(_$SetBatchImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? batch = null,
+  }) {
+    return _then(_$SetBatchImpl(
+      null == batch
+          ? _value.batch
+          : batch // ignore: cast_nullable_to_non_nullable
+              as Batch,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BatchCopyWith<$Res> get batch {
+    return $BatchCopyWith<$Res>(_value.batch, (value) {
+      return _then(_value.copyWith(batch: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SetBatchImpl implements _SetBatch {
+  const _$SetBatchImpl(this.batch);
+
+  @override
+  final Batch batch;
+
+  @override
+  String toString() {
+    return 'BatchEvent.setBatch(batch: $batch)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetBatchImpl &&
+            (identical(other.batch, batch) || other.batch == batch));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, batch);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetBatchImplCopyWith<_$SetBatchImpl> get copyWith =>
+      __$$SetBatchImplCopyWithImpl<_$SetBatchImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getBatchDetails,
+    required TResult Function(Batch batch) setBatch,
+    required TResult Function() authCheckRequested,
+    required TResult Function() refreshToken,
+  }) {
+    return setBatch(batch);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getBatchDetails,
+    TResult? Function(Batch batch)? setBatch,
+    TResult? Function()? authCheckRequested,
+    TResult? Function()? refreshToken,
+  }) {
+    return setBatch?.call(batch);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getBatchDetails,
+    TResult Function(Batch batch)? setBatch,
+    TResult Function()? authCheckRequested,
+    TResult Function()? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (setBatch != null) {
+      return setBatch(batch);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetBatchDetails value) getBatchDetails,
+    required TResult Function(_SetBatch value) setBatch,
+    required TResult Function(_AuthCheckRequested value) authCheckRequested,
+    required TResult Function(_RefreshToken value) refreshToken,
+  }) {
+    return setBatch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetBatchDetails value)? getBatchDetails,
+    TResult? Function(_SetBatch value)? setBatch,
+    TResult? Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(_RefreshToken value)? refreshToken,
+  }) {
+    return setBatch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetBatchDetails value)? getBatchDetails,
+    TResult Function(_SetBatch value)? setBatch,
+    TResult Function(_AuthCheckRequested value)? authCheckRequested,
+    TResult Function(_RefreshToken value)? refreshToken,
+    required TResult orElse(),
+  }) {
+    if (setBatch != null) {
+      return setBatch(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetBatch implements BatchEvent {
+  const factory _SetBatch(final Batch batch) = _$SetBatchImpl;
+
+  Batch get batch;
+  @JsonKey(ignore: true)
+  _$$SetBatchImplCopyWith<_$SetBatchImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -227,6 +394,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getBatchDetails,
+    required TResult Function(Batch batch) setBatch,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
   }) {
@@ -237,6 +405,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getBatchDetails,
+    TResult? Function(Batch batch)? setBatch,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
   }) {
@@ -247,6 +416,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getBatchDetails,
+    TResult Function(Batch batch)? setBatch,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     required TResult orElse(),
@@ -261,6 +431,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetBatchDetails value) getBatchDetails,
+    required TResult Function(_SetBatch value) setBatch,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
   }) {
@@ -271,6 +442,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetBatchDetails value)? getBatchDetails,
+    TResult? Function(_SetBatch value)? setBatch,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
   }) {
@@ -281,6 +453,7 @@ class _$AuthCheckRequestedImpl implements _AuthCheckRequested {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetBatchDetails value)? getBatchDetails,
+    TResult Function(_SetBatch value)? setBatch,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),
@@ -335,6 +508,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getBatchDetails,
+    required TResult Function(Batch batch) setBatch,
     required TResult Function() authCheckRequested,
     required TResult Function() refreshToken,
   }) {
@@ -345,6 +519,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getBatchDetails,
+    TResult? Function(Batch batch)? setBatch,
     TResult? Function()? authCheckRequested,
     TResult? Function()? refreshToken,
   }) {
@@ -355,6 +530,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getBatchDetails,
+    TResult Function(Batch batch)? setBatch,
     TResult Function()? authCheckRequested,
     TResult Function()? refreshToken,
     required TResult orElse(),
@@ -369,6 +545,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetBatchDetails value) getBatchDetails,
+    required TResult Function(_SetBatch value) setBatch,
     required TResult Function(_AuthCheckRequested value) authCheckRequested,
     required TResult Function(_RefreshToken value) refreshToken,
   }) {
@@ -379,6 +556,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetBatchDetails value)? getBatchDetails,
+    TResult? Function(_SetBatch value)? setBatch,
     TResult? Function(_AuthCheckRequested value)? authCheckRequested,
     TResult? Function(_RefreshToken value)? refreshToken,
   }) {
@@ -389,6 +567,7 @@ class _$RefreshTokenImpl implements _RefreshToken {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetBatchDetails value)? getBatchDetails,
+    TResult Function(_SetBatch value)? setBatch,
     TResult Function(_AuthCheckRequested value)? authCheckRequested,
     TResult Function(_RefreshToken value)? refreshToken,
     required TResult orElse(),

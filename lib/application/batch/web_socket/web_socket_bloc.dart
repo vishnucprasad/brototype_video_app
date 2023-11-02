@@ -38,7 +38,7 @@ class WebSocketBloc extends Bloc<WebSocketEvent, WebSocketState> {
       'batch',
       (data) => add(WebSocketEvent.batchUpdate(data as Map<String, dynamic>)),
     );
-    _socket.on('signout', (_) => add(const WebSocketEvent.signout()));
+    _socket.on('signout', (_) => add(const WebSocketEvent.loggedOut()));
 
     on<WebSocketEvent>((event, emit) {
       event.map(
@@ -77,9 +77,9 @@ class WebSocketBloc extends Bloc<WebSocketEvent, WebSocketState> {
           final batch = Batch.fromJson(e.data);
           emit(state.copyWith(batch: batch));
         },
-        signout: (_) {
+        loggedOut: (_) {
           add(const WebSocketEvent.disconnect());
-          emit(state.copyWith(isSignedOut: true));
+          emit(state.copyWith(isLoggedOut: true));
         },
       );
     });

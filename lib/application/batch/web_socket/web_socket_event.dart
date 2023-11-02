@@ -14,5 +14,5 @@ class WebSocketEvent with _$WebSocketEvent {
   const factory WebSocketEvent.batchUpdate(
     Map<String, dynamic> data,
   ) = _BatchUpdate;
-  const factory WebSocketEvent.signout() = _Signout;
+  const factory WebSocketEvent.loggedOut() = _LoggedOut;
 }

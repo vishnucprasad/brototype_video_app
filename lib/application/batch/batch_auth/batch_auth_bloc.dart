@@ -45,6 +45,10 @@ class BatchAuthBloc extends Bloc<BatchAuthEvent, BatchAuthState> {
             },
           );
         },
+        loggedOut: (_) async {
+          await _batchAuthFacade.removeTokens();
+          emit(const BatchAuthState.unauthenticated());
+        },
       );
     });
   }
