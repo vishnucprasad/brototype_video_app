@@ -29,7 +29,8 @@ class VideoList extends StatelessWidget {
                       isLocked: isLocked,
                       thumbnail: video.thumbnail,
                       url: video.url,
-                      description: video.description,
+                      description:
+                          isLocked ? 'Part ${index + 1}' : video.description,
                       onPressed: () {
                         if (isLocked) {
                           FlushbarHelper.createError(
