@@ -9,17 +9,19 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart'
-    as _i11;
-import 'package:brototype_video_app/application/admin/admin_bloc.dart' as _i12;
+    as _i12;
+import 'package:brototype_video_app/application/admin/admin_bloc.dart' as _i13;
 import 'package:brototype_video_app/application/admin/admin_login_form/admin_login_form_bloc.dart'
-    as _i13;
-import 'package:brototype_video_app/application/admin/create_batch_form/create_batch_form_bloc.dart'
-    as _i17;
-import 'package:brototype_video_app/application/batch/batch_auth/batch_auth_bloc.dart'
     as _i14;
-import 'package:brototype_video_app/application/batch/batch_bloc.dart' as _i15;
+import 'package:brototype_video_app/application/admin/create_batch_form/create_batch_form_bloc.dart'
+    as _i18;
+import 'package:brototype_video_app/application/batch/batch_auth/batch_auth_bloc.dart'
+    as _i15;
+import 'package:brototype_video_app/application/batch/batch_bloc.dart' as _i16;
 import 'package:brototype_video_app/application/batch/batch_login_form/batch_login_form_bloc.dart'
-    as _i16;
+    as _i17;
+import 'package:brototype_video_app/application/batch/web_socket/web_socket_bloc.dart'
+    as _i11;
 import 'package:brototype_video_app/domain/admin/auth/i_admin_auth_facade.dart'
     as _i3;
 import 'package:brototype_video_app/domain/admin/i_admin_repository.dart'
@@ -54,25 +56,26 @@ extension GetItInjectableX on _i1.GetIt {
     gh.factory<_i5.IAdminRepository>(() => _i6.AdminRepository());
     gh.lazySingleton<_i7.IBatchAuthFacade>(() => _i8.BatchAuthFacade());
     gh.lazySingleton<_i9.IBatchRepository>(() => _i10.BatchRepository());
-    gh.factory<_i11.AdminAuthBloc>(() => _i11.AdminAuthBloc(
+    gh.factory<_i11.WebSocketBloc>(() => _i11.WebSocketBloc());
+    gh.factory<_i12.AdminAuthBloc>(() => _i12.AdminAuthBloc(
           gh<_i3.IAdminAuthFacade>(),
           gh<_i5.IAdminRepository>(),
         ));
-    gh.factory<_i12.AdminBloc>(() => _i12.AdminBloc(
+    gh.factory<_i13.AdminBloc>(() => _i13.AdminBloc(
           gh<_i3.IAdminAuthFacade>(),
           gh<_i5.IAdminRepository>(),
         ));
-    gh.factory<_i13.AdminLoginFormBloc>(
-        () => _i13.AdminLoginFormBloc(gh<_i3.IAdminAuthFacade>()));
-    gh.factory<_i14.BatchAuthBloc>(
-        () => _i14.BatchAuthBloc(gh<_i7.IBatchAuthFacade>()));
-    gh.factory<_i15.BatchBloc>(() => _i15.BatchBloc(
+    gh.factory<_i14.AdminLoginFormBloc>(
+        () => _i14.AdminLoginFormBloc(gh<_i3.IAdminAuthFacade>()));
+    gh.factory<_i15.BatchAuthBloc>(
+        () => _i15.BatchAuthBloc(gh<_i7.IBatchAuthFacade>()));
+    gh.factory<_i16.BatchBloc>(() => _i16.BatchBloc(
           gh<_i7.IBatchAuthFacade>(),
           gh<_i9.IBatchRepository>(),
         ));
-    gh.factory<_i16.BatchLoginFormBloc>(
-        () => _i16.BatchLoginFormBloc(gh<_i7.IBatchAuthFacade>()));
-    gh.factory<_i17.CreateBatchFormBloc>(() => _i17.CreateBatchFormBloc(
+    gh.factory<_i17.BatchLoginFormBloc>(
+        () => _i17.BatchLoginFormBloc(gh<_i7.IBatchAuthFacade>()));
+    gh.factory<_i18.CreateBatchFormBloc>(() => _i18.CreateBatchFormBloc(
           gh<_i3.IAdminAuthFacade>(),
           gh<_i5.IAdminRepository>(),
         ));
