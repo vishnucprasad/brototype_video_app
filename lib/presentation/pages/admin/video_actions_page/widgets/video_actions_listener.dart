@@ -1,4 +1,5 @@
 import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart';
 import 'package:brototype_video_app/application/admin/admin_bloc.dart';
 import 'package:brototype_video_app/presentation/pages/admin/video_actions_page/widgets/video_actions_body.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,13 @@ class VideoActionsListener extends StatelessWidget {
             (_) => null,
           ),
         );
+
+        if (state.checkAuth) {
+          context
+              .read<AdminAuthBloc>()
+              .add(const AdminAuthEvent.authCheckRequested());
+          context.read<AdminBloc>().add(const AdminEvent.authCheckRequested());
+        }
       },
       child: const VideoActionsBody(),
     );
