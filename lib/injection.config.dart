@@ -57,10 +57,8 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i7.IBatchAuthFacade>(() => _i8.BatchAuthFacade());
     gh.lazySingleton<_i9.IBatchRepository>(() => _i10.BatchRepository());
     gh.factory<_i11.WebSocketBloc>(() => _i11.WebSocketBloc());
-    gh.factory<_i12.AdminAuthBloc>(() => _i12.AdminAuthBloc(
-          gh<_i3.IAdminAuthFacade>(),
-          gh<_i5.IAdminRepository>(),
-        ));
+    gh.factory<_i12.AdminAuthBloc>(
+        () => _i12.AdminAuthBloc(gh<_i3.IAdminAuthFacade>()));
     gh.factory<_i13.AdminBloc>(() => _i13.AdminBloc(
           gh<_i3.IAdminAuthFacade>(),
           gh<_i5.IAdminRepository>(),

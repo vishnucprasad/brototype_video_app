@@ -1,12 +1,11 @@
 import 'package:brototype_video_app/application/admin/admin_auth/admin_auth_bloc.dart';
 import 'package:brototype_video_app/application/batch/batch_auth/batch_auth_bloc.dart';
-import 'package:brototype_video_app/domain/core/app_keys.dart';
+import 'package:brototype_video_app/domain/admin/i_admin_repository.dart';
 import 'package:brototype_video_app/injection.dart';
 import 'package:brototype_video_app/presentation/router/app_router.dart';
 import 'package:brototype_video_app/presentation/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class BrototypeVideoApp extends StatelessWidget {
   BrototypeVideoApp({super.key});
@@ -26,16 +25,15 @@ class BrototypeVideoApp extends StatelessWidget {
             listener: (context, state) {
               state.map(
                 initial: (_) => null,
-                authenticated: (_) {
-                  final batchId = getIt<SharedPreferences>().getString(
-                    AppKeys.batchIdKey,
-                  );
-                  if (batchId != null) {
-                    return _appRouter.replace(const VideoActionsRoute());
-                  }
-                  _appRouter.replace(const CreateBatchRoute());
+                authenticated: (_) async {
+                  final batchIdOption =
+                      await getIt<IAdminRepository>().getSavedBatchId();
+                  batchIdOption.isSome()
+                      ? _appRouter.replace(const VideoActionsRoute())
+                      : _appRouter.replace(const CreateBatchRoute());
                 },
-                unauthenticated: (_) {
+                unauthenticated: (_) async {
+                  await getIt<IAdminRepository>().removeBatchId();
                   _appRouter.replace(const AdminLoginRoute());
                 },
               );
