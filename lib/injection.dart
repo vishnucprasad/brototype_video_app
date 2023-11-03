@@ -11,11 +11,7 @@ final GetIt getIt = GetIt.instance;
 @injectableInit
 Future<void> configureInjection(String env) async {
   final sharedPrefrences = await SharedPreferences.getInstance();
-  final baseOptions = BaseOptions(
-    baseUrl: kApiBaseUrl,
-    connectTimeout: const Duration(seconds: 30),
-    receiveTimeout: const Duration(seconds: 30),
-  );
+  final baseOptions = BaseOptions(baseUrl: kApiBaseUrl);
 
   getIt.registerSingleton<SharedPreferences>(sharedPrefrences);
   getIt.registerLazySingleton<Dio>(() => Dio(baseOptions));
