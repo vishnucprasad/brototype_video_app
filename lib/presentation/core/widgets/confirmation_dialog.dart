@@ -6,13 +6,11 @@ import 'package:flutter/material.dart';
 
 class ConfirmationDialog extends StatelessWidget {
   const ConfirmationDialog({
-    required this.isLocked,
-    required this.onConfirm,
+    required this.text,
     super.key,
   });
 
-  final bool isLocked;
-  final void Function() onConfirm;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +26,7 @@ class ConfirmationDialog extends StatelessWidget {
       ),
       title: Center(
         child: Text(
-          "Are you sure you want to ${isLocked ? "unlock" : "lock"} this video",
+          text,
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -42,7 +40,7 @@ class ConfirmationDialog extends StatelessWidget {
             kWidth,
             Expanded(
               child: ElevatedButton(
-                onPressed: () => context.popRoute(),
+                onPressed: () => context.popRoute(false),
                 style: ButtonStyle(
                   side: MaterialStateProperty.all<BorderSide>(
                     BorderSide(
@@ -69,10 +67,7 @@ class ConfirmationDialog extends StatelessWidget {
             kWidth,
             Expanded(
               child: ElevatedButton(
-                onPressed: () {
-                  onConfirm();
-                  context.popRoute();
-                },
+                onPressed: () => context.popRoute(true),
                 style: ButtonStyle(
                   side: MaterialStateProperty.all<BorderSide>(
                     const BorderSide(

@@ -48,7 +48,10 @@ class VideoActionsBody extends StatelessWidget {
                       )
                     : VideoList(batch: state.batch),
                 const Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(
+                    vertical: 8,
+                    horizontal: 20,
+                  ),
                   child: LogoutButton(),
                 ),
               ],

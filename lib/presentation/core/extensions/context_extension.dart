@@ -4,16 +4,13 @@ import 'package:flutter/material.dart';
 extension ContextX on BuildContext {
   Brightness get platformBrightness => MediaQuery.of(this).platformBrightness;
   bool get isDarkMode => platformBrightness == Brightness.dark;
-  void showVideoActionDialog({
-    required bool isLocked,
-    required void Function() onConfirm,
+
+  Future<bool?> showConfirmationDialog({
+    required String text,
   }) async {
-    return showDialog(
+    return showDialog<bool>(
       context: this,
-      builder: (context) => ConfirmationDialog(
-        isLocked: isLocked,
-        onConfirm: onConfirm,
-      ),
+      builder: (context) => ConfirmationDialog(text: text),
     );
   }
 }

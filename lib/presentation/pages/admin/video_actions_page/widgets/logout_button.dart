@@ -14,8 +14,16 @@ class LogoutButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: 50,
       child: ElevatedButton(
-        onPressed: () =>
-            context.read<AdminAuthBloc>().add(const AdminAuthEvent.logout()),
+        onPressed: () async {
+          final isConfirmed = await context.showConfirmationDialog(
+            text: 'Are you sure you want to logout',
+          );
+
+          if (isConfirmed == true) {
+            // ignore: use_build_context_synchronously
+            context.read<AdminAuthBloc>().add(const AdminAuthEvent.logout());
+          }
+        },
         style: ButtonStyle(
           elevation: const MaterialStatePropertyAll<double>(0),
           backgroundColor: MaterialStateProperty.all<Color>(

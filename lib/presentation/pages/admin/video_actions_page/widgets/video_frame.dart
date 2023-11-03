@@ -62,17 +62,50 @@ class VideoFrame extends StatelessWidget {
                         Container(
                           color: kBlackColor.withOpacity(0.5),
                           child: Center(
-                            child: CircleAvatar(
-                              radius: 24,
-                              backgroundColor: kWhiteColor,
-                              child: Center(
-                                child: IconButton(
-                                  onPressed: onPressed,
-                                  iconSize: 30,
-                                  icon: const Icon(
-                                    Icons.lock_open_outlined,
-                                    color: kBlackColor,
+                            child: ElevatedButton.icon(
+                              style: ButtonStyle(
+                                padding:
+                                    const MaterialStatePropertyAll<EdgeInsets>(
+                                  EdgeInsets.symmetric(
+                                    vertical: 8,
+                                    horizontal: 24,
                                   ),
+                                ),
+                                shape: MaterialStatePropertyAll<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                ),
+                                iconColor: MaterialStatePropertyAll<Color>(
+                                  context.isDarkMode
+                                      ? kBlackColor
+                                      : kWhiteColor,
+                                ),
+                                foregroundColor:
+                                    MaterialStatePropertyAll<Color>(
+                                  context.isDarkMode
+                                      ? kBlackColor
+                                      : kWhiteColor,
+                                ),
+                                backgroundColor:
+                                    MaterialStatePropertyAll<Color>(
+                                  context.isDarkMode
+                                      ? kWhiteColor
+                                      : kBlackColor,
+                                ),
+                              ),
+                              onPressed: onPressed,
+                              icon: const Icon(
+                                Icons.lock_open_outlined,
+                                color: kBlackColor,
+                                size: 24,
+                              ),
+                              label: const Text(
+                                'Unlock',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
@@ -83,17 +116,41 @@ class VideoFrame extends StatelessWidget {
                   : Container(
                       color: kBlackColor.withOpacity(0.5),
                       child: Center(
-                        child: CircleAvatar(
-                          radius: 24,
-                          backgroundColor: kWhiteColor,
-                          child: Center(
-                            child: IconButton(
-                              onPressed: onPressed,
-                              iconSize: 30,
-                              icon: const Icon(
-                                Icons.lock_outlined,
-                                color: kBlackColor,
+                        child: ElevatedButton.icon(
+                          style: ButtonStyle(
+                            padding: const MaterialStatePropertyAll<EdgeInsets>(
+                              EdgeInsets.symmetric(
+                                vertical: 8,
+                                horizontal: 24,
                               ),
+                            ),
+                            shape: MaterialStatePropertyAll<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                            ),
+                            iconColor: MaterialStatePropertyAll<Color>(
+                              context.isDarkMode ? kBlackColor : kWhiteColor,
+                            ),
+                            foregroundColor: MaterialStatePropertyAll<Color>(
+                              context.isDarkMode ? kBlackColor : kWhiteColor,
+                            ),
+                            backgroundColor: MaterialStatePropertyAll<Color>(
+                              context.isDarkMode ? kWhiteColor : kBlackColor,
+                            ),
+                          ),
+                          onPressed: onPressed,
+                          icon: const Icon(
+                            Icons.lock_outlined,
+                            color: kBlackColor,
+                            size: 24,
+                          ),
+                          label: const Text(
+                            'Lock',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:brototype_video_app/application/admin/admin_bloc.dart';
 import 'package:brototype_video_app/domain/batch/batch.dart';
 import 'package:brototype_video_app/presentation/core/constants.dart';
@@ -30,17 +32,22 @@ class VideoList extends StatelessWidget {
                       thumbnail: video.thumbnail,
                       url: video.url,
                       description: video.description,
-                      onPressed: () {
-                        context.showVideoActionDialog(
-                          isLocked: isLocked,
-                          onConfirm: () => isLocked
+                      onPressed: () async {
+                        final isConfirmed =
+                            await context.showConfirmationDialog(
+                          text:
+                              "Are you sure you want to ${isLocked ? "unlock" : "lock"} this video",
+                        );
+
+                        if (isConfirmed == true) {
+                          isLocked
                               ? context
                                   .read<AdminBloc>()
                                   .add(AdminEvent.unlockVideo(video.id))
                               : context
                                   .read<AdminBloc>()
-                                  .add(AdminEvent.lockVideo(video.id)),
-                        );
+                                  .add(AdminEvent.lockVideo(video.id));
+                        }
                       },
                     ),
                     kHeightLarge,
