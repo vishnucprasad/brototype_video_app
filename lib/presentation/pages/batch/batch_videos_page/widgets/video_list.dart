@@ -1,7 +1,9 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:brototype_video_app/domain/batch/batch.dart';
+import 'package:brototype_video_app/presentation/core/colors.dart';
 import 'package:brototype_video_app/presentation/core/constants.dart';
+import 'package:brototype_video_app/presentation/core/extensions/context_extension.dart';
 import 'package:brototype_video_app/presentation/pages/batch/batch_videos_page/widgets/video_frame.dart';
 import 'package:brototype_video_app/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
@@ -48,19 +50,21 @@ class VideoList extends StatelessWidget {
                 );
               },
             )
-          : const Center(
+          : Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
                     Icons.videocam_off,
                     size: 100,
+                    color: context.isDarkMode ? kWhiteColor : kBlackColor,
                   ),
                   Text(
                     "No videos available",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
+                      color: context.isDarkMode ? kWhiteColor : kBlackColor,
                     ),
                   ),
                 ],

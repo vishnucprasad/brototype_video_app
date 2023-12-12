@@ -14,4 +14,4 @@ enum WebSocketStatus {
   error,
 }
 
-const kApiBaseUrl = 'http://192.168.117.218:3000';
+const kApiBaseUrl = 'http://192.168.55.218:3000';

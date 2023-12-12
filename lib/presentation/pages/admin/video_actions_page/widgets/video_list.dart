@@ -2,6 +2,7 @@
 
 import 'package:brototype_video_app/application/admin/admin_bloc.dart';
 import 'package:brototype_video_app/domain/batch/batch.dart';
+import 'package:brototype_video_app/presentation/core/colors.dart';
 import 'package:brototype_video_app/presentation/core/constants.dart';
 import 'package:brototype_video_app/presentation/core/extensions/context_extension.dart';
 import 'package:brototype_video_app/presentation/pages/admin/video_actions_page/widgets/video_frame.dart';
@@ -55,19 +56,21 @@ class VideoList extends StatelessWidget {
                 );
               },
             )
-          : const Center(
+          : Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
                     Icons.videocam_off,
                     size: 100,
+                    color: context.isDarkMode ? kWhiteColor : kBlackColor,
                   ),
                   Text(
                     "No videos available",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
+                      color: context.isDarkMode ? kWhiteColor : kBlackColor,
                     ),
                   ),
                 ],
